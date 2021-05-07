@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h1>thanks God</h1> 
-</body>
+    
+    <script src="https://kit.fontawesome.com/b6d2dc537c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <title>ohmyfood</title>
+  </head>
+
+ <body class="bloc_page">    
+    <!--En tête de page-->
+   <header> <!--logo-->          
+     <div class="logo">
+        <img src="\images\ohmyfood@2x.svg" alt="logo">
+     </div>  
+     <div id="ubication">
+       <form class="ubication" action="#">
+         <span></span><i class="fas fa-map-marker-alt"></i></span>
+         <input class="recherche" type="search" name="search" placeholder="Paris, Belleville">
+       </form>
+     </div>        
+    </header>
+    <!--Début du corps-->
+    <!--Ubication de la personne-->
+   <main>
+     <section id="information">
+        <h1>Réservez le menu qui <br> vous convient</h1>
+        <p>Découvrez des restaurants d'éxception,<br> sélectionnés par nos soins.</p>
+        <a href="restaurants" class="btn"> Eplorez nos restaurants</a>
+        <!--<button class="btn"
+        type="button">
+        <p>Explorer nos restaurants</p>
+       </button>-->    
+     </section>
+      <!--Fonctionnement de l'appli-->
+     <section id="list">
+        <h2>Fonctionnement</h2>
+        <ol>
+          <li>
+            <div class="list_carte">
+             <p class="choix">
+               <i class="fas fa-mobile-alt"></i>
+              <span>Choisissez un restaurant </span></p>
+            </div> 
+          </li>
+           <li>
+             <div class="list_carte">
+                <p><i class="fas fa-list-ul"></i>
+                <span>Composez votre menu</span> </p>
+              </div>  
+           </li>                       
+           <li>
+              <div class="list_carte">
+                <p><i class="fas fa-store"></i>
+                <span>Degusté au restaurant</span></p>
+              </div>                
+            </li>
+          </ol>    
+        </section>  
+      <!--Photos des Restaurants-->
+     <section  id="restaurants">
+        <h2>Restaurants</h2>
+        
+         <!--Restaurant La palette-->        
+          <div class="cartes_restaurants">
+            <a href="menu1.html">
+              <span>Nouveau</span> 
+              <img src="\images\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="decoration">
+              <div class="legende_restaurants">
+               <h4>La palette du goût</h4>
+               <p>Ménilmontant</p>
+               <i class="far fa-heart"></i>
+              </div> 
+            </a>                          
+          </div>                     
+         <!--Restaurant La note-->
+         <div class="cartes_restaurants">
+           <a href="menu2.html">
+              <span>Nouveau</span> 
+              <img src="\images\stil-u2Lp8tXIcjw-unsplash.jpg" alt="assieterond">
+              <div class="legende_restaurants">
+                <h4>La note enchantée</h4>
+                <p>Charonne</p>
+                <i class="far fa-heart"></i>
+              </div>
+           </a>
+         </div> 
+         <!--Restaurant A la francaise-->
+         <div class="cartes_restaurants">
+           <a href="menu3.html">
+             <span>Nouveau</span> 
+             <img src="\images\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="creme">
+             <div class="legende_restaurants">
+               <h4>À la francaise</h4>
+               <p>Cité Rouge</p>
+               <i class="far fa-heart"></i>
+             </div>
+           </a> 
+         </div>
+         <!--Restaurant Le délice des sens-->
+         <div class="cartes_restaurants">
+           <a href="menu4.html">
+             <span>Nouveau</span> 
+             <img src="\images\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="longassiete">
+             <div class="legende_restaurants">                 
+               <h4>Le délice des sens</h4>
+               <p>Folie-Méricourt</p>
+               <i class="far fa-heart"></i>
+             </div>
+           </a>   
+         </div> 
+     </section>
+   </main> 
+    <!--Last section-->   
+    <footer class="footer">
+        <h2 class="title_footer">ohmyfood</h2>
+        <div class="Info_adicional">  
+          <ul>
+            <li> 
+              <a href="#">     
+                <i class="fas fa-utensils"></i> 
+                 Proposer un restaurant
+              </a>
+            </li>
+            <li>
+              <a href="#">
+               <i class="fas fa-hands-helping"></i> 
+               Dévenir partenaire
+              </a>
+            </li>
+              
+            <li>
+              <a href="#"> Mentions légales</a></li>
+            <li>
+              <a href="mailto:betsabe.poudevigne@gmail.com"> Contact</a></li>
+          </ul>        
+        </div>
+      </footer>   
+ </body>
 </html>
