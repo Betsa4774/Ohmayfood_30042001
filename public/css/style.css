@@ -1,0 +1,136 @@
+@media all and (max-width: 767px) {
+  .bloc_page {
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  #ubication {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .recherche {
+    border: none;
+    font-weight: bolder;
+    font-size: 0.8em;
+  }
+
+  #information h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #information p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff79dA;
+    color: #f2f2f2;
+    border-radius: 10em;
+    padding: 10px;
+  }
+
+  #list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .list_carte {
+    width: 95%;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .list_carte i {
+    padding-left: 10px;
+  }
+
+  .list_carte span {
+    padding-left: 25px;
+  }
+
+  .choix {
+    padding-left: 5px;
+  }
+
+  .fa-mobile-alt, .fa-list-ul {
+    color: grey;
+  }
+
+  .fa-store {
+    color: #9356DC;
+  }
+
+  #restaurants {
+    padding-left: 15px;
+  }
+
+  .restaurants_list {
+    text-decoration: none;
+  }
+
+  .cartes_restaurants {
+    background-color: #FFFF;
+    object-fit: contain;
+    width: 95%;
+  }
+
+  .cartes_restaurants a {
+    text-decoration: none;
+    position: relative;
+  }
+
+  .cartes_restaurants span {
+    background-color: aqua;
+    position: absolute;
+    right: 5%;
+    color: green;
+    margin-top: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: "Roboto";
+    padding: 0 10px;
+  }
+
+  .cartes_restaurants img {
+    width: 100%;
+    object-fit: cover;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .footer {
+    color: #f2f2f2;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

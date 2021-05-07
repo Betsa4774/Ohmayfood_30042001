@@ -1,0 +1,142 @@
+$color-primary: #9356DC;
+$color-secondary: #ff79dA;
+$color-tertiary: #99E2D0;
+$color-card: #FFFF;
+$color-text: #f2f2f2;
+$font-titres: 'Shrikhand', cursive;
+$font-titres1: 'Shrikhand';
+$font-text: 'Roboto', sans-serif;
+$taille-lettre: 0.3em, 0.8em, 1.1em, 1.5em; 
+$padding-dimensions: 18px, 5px, 10px;
+
+@media all and (max-width: 767px) {
+    .bloc_page {
+        width: 100%;
+    }   
+     header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;         
+    }
+   .logo {
+        display: flex;
+        justify-content: center;
+        }     
+   #ubication {
+            display: flex;
+            flex-direction: row;  
+            justify-content: center;
+            margin-top: 25px;   
+        }     
+    .recherche {
+            border: none;
+            font-weight: bolder;
+            font-size: nth($taille-lettre,2);
+    }
+    #information h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: nth($taille-lettre,4);
+        font-family: $font-text;  
+    }   
+    #information p {
+        display: flex;  
+        justify-content: center;  
+        text-align: center;  
+        font-size: nth($taille-lettre,3);
+        font-family: $font-text;       
+    }
+    .btn {
+        display: flex;  
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;        
+        background-color:$color-secondary;
+        color: $color-text;
+        border-radius: 10em;
+        padding: 10px;
+        
+        
+    }
+    #list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .list_carte {
+        width: 95%;
+        background-color:pink;
+        display: flex;
+        flex-direction: row;
+    }
+    .list_carte i {
+        padding-left: 10px; 
+           
+    }
+    .list_carte span {
+        padding-left: 25px;
+    }
+    .choix {
+        padding-left: 5px;
+    }
+    .fa-mobile-alt, .fa-list-ul {
+        color: grey;
+    }
+    .fa-store {
+        color: $color-primary;
+    }
+   
+        
+    
+   //Restaurants//
+
+  #restaurants {
+       padding-left: 15px;
+   }
+    .restaurants_list {
+       text-decoration: none;
+    }
+    .cartes_restaurants {
+        background-color:$color-card;
+        object-fit: contain;
+        width: 95%;
+    }
+    .cartes_restaurants a {
+        text-decoration: none;
+        position: relative;
+    }
+    .cartes_restaurants span {
+        background-color: aqua;
+        position: absolute;
+        right: 5%;
+        color: green;
+        margin-top: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: nth($font-text,1);
+        padding: 0 10px;
+       
+    }
+    .cartes_restaurants img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vw;
+        object-fit: cover;        
+        border-radius: 8px 8px 0 0;
+     }
+  .footer {
+    color: $color-text;
+  }  
+ 
+}    
+    
+
+
+
+
+
+   
