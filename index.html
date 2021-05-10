@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://kit.fontawesome.com/b6d2dc537c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="public/css/style.css">
+    <!--<link rel="stylesheet" href="public/css/style.css">-->
+    <link rel="stylesheet" href="./public/css/style.css">
     <link rel="icon" type="image/ico" href="favicon.ico">
    
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +18,13 @@
     <title>ohmyfood</title>
   </head>
 
- <body class="bloc_page">    
+ <body class="bloc_page">  
+   <!--<div class="loader">
+     <div class="loader__animation">
+       <div class="loader_animation--icone"> <i class="fas fa-utensils"></i>
+       </div>
+     </div>
+   </div>-->  
     <!--En tête de page-->
    <header> <!--logo-->          
      <div class="logo">
@@ -35,7 +42,7 @@
    <main>
      <section id="information">
         <h1>Réservez le menu qui <br> vous convient</h1>
-        <p>Découvrez des restaurants d'éxception,<br> sélectionnés par nos soins.</p>
+       <p>Découvrez des restaurants d'éxception,<br> selectionnés par nos soins.</p>
         <a href="restaurants" class="btn"> Eplorez nos restaurants</a>
         <!--<button class="btn"
         type="button">
@@ -45,27 +52,29 @@
       <!--Fonctionnement de l'appli-->
      <section id="list">
         <h2>Fonctionnement</h2>
-        <ol>
+        <ul>
           <li>
-            <div class="list_carte">
-             <p class="choix">
-               <i class="fas fa-mobile-alt"></i>
-              <span>Choisissez un restaurant </span></p>
+            <p>1</p>              
+            <div class="list_carte">              
+             <i class="fas fa-mobile-alt"></i>
+              <span>Choisissez un restaurant </span>
             </div> 
           </li>
            <li>
+            <p>2</p>
              <div class="list_carte">
-                <p><i class="fas fa-list-ul"></i>
-                <span>Composez votre menu</span> </p>
+                <i class="fas fa-list-ul"></i>
+                <span>Composez votre menu</span>
               </div>  
-           </li>                       
+           </li>                                  
            <li>
-              <div class="list_carte">
-                <p><i class="fas fa-store"></i>
-                <span>Degusté au restaurant</span></p>
+            <p>3</p>
+            <div class="list_carte">
+                <i class="fas fa-store"></i>
+                <span>Degusté au restaurant</span>
               </div>                
             </li>
-          </ol>    
+          </ul>    
         </section>  
       <!--Photos des Restaurants-->
      <section  id="restaurants">
@@ -123,8 +132,8 @@
    </main> 
     <!--Last section-->   
     <footer class="footer">
-        <h2 class="title_footer">ohmyfood</h2>
-        <div class="Info_adicional">  
+        <h2 class="title__footer">ohmyfood</h2>
+        <div class="info__footer" >  
           <ul>
             <li> 
               <a href="#">     
