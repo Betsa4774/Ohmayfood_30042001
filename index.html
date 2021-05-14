@@ -17,37 +17,36 @@
     
     <title>ohmyfood</title>
   </head>
-
  <body class="bloc_page">  
-   <!--<div class="loader">
-     <div class="loader__animation">
-       <div class="loader_animation--icone"> <i class="fas fa-utensils"></i>
-       </div>
-     </div>
-   </div>-->  
+   <!--Création du loader-->
+  <div class="loader"> 
+    <div class="loader__animation"></div>
+   
+   <!-- <div class="loader__animation__icone"><i class="fas fa-concierge-bell"></i></div>-->
+   </div>  
+    
     <!--En tête de page-->
    <header> <!--logo-->          
      <div class="logo">
-        <img src="\images\ohmyfood@2x.svg" alt="logo">
-     </div>  
-     <div id="ubication">
-       <form class="ubication" action="#">
-         <span></span><i class="fas fa-map-marker-alt"></i></span>
-         <input class="recherche" type="search" name="search" placeholder="Paris, Belleville">
-       </form>
-     </div>        
-    </header>
+       <img src="\images\ohmyfood@2x.svg" alt="logo">
+      <!-- <h1>ohmyfood</h1>-->
+     </div>   
+     <span id="ubication">
+      <form class="ubication" action="#">
+        <span><i class="fas fa-map-marker-alt"></i></span>
+        <input class="recherche" type="search" name="search" placeholder="Paris, Belleville">
+      </form>
+    </div> 
+    </header>  
+    
+       
     <!--Début du corps-->
     <!--Ubication de la personne-->
    <main>
-     <section id="information">
+     <section id="information">       
         <h1>Réservez le menu qui <br> vous convient</h1>
        <p>Découvrez des restaurants d'éxception,<br> selectionnés par nos soins.</p>
-        <a href="restaurants" class="btn"> Eplorez nos restaurants</a>
-        <!--<button class="btn"
-        type="button">
-        <p>Explorer nos restaurants</p>
-       </button>-->    
+        <a href="restaurants" class="btn"> Eplorez nos restaurants</a>         
      </section>
       <!--Fonctionnement de l'appli-->
      <section id="list">
@@ -64,7 +63,7 @@
             <p>2</p>
              <div class="list_carte">
                 <i class="fas fa-list-ul"></i>
-                <span>Composez votre menu</span>
+                <span>Composez votre menu</span> 
               </div>  
            </li>                                  
            <li>
@@ -87,20 +86,26 @@
               <img src="\images\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="decoration">
               <div class="legende_restaurants">
                <h4>La palette du goût</h4>
-               <p>Ménilmontant</p>
-               <i class="far fa-heart"></i>
-              </div> 
+               <p>Ménilmontant</p>                     
+               <div class="btn_like">
+                  <div class="btn_like_icone"><i class="far fa-heart"></i></div>
+                  <div class="btn_like--rempli"><i class="fas fa-heart"></i></div>                 
+                </div>   
+              </div>             
             </a>                          
           </div>                     
          <!--Restaurant La note-->
          <div class="cartes_restaurants">
            <a href="menu2.html">
               <span>Nouveau</span> 
-              <img src="\images\stil-u2Lp8tXIcjw-unsplash.jpg" alt="assieterond">
+             <img src="\images\stil-u2Lp8tXIcjw-unsplash.jpg" alt="assieterond">
               <div class="legende_restaurants">
                 <h4>La note enchantée</h4>
                 <p>Charonne</p>
-                <i class="far fa-heart"></i>
+                <div class="btn_like">
+                  <div class="btn_like_icone"><i class="far fa-heart"></i> 
+                  </div>
+                 </div>    
               </div>
            </a>
          </div> 
@@ -108,11 +113,14 @@
          <div class="cartes_restaurants">
            <a href="menu3.html">
              <span>Nouveau</span> 
-             <img src="\images\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="creme">
+            <img src="\images\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="creme">
              <div class="legende_restaurants">
                <h4>À la francaise</h4>
                <p>Cité Rouge</p>
-               <i class="far fa-heart"></i>
+               <div class="btn_like">
+                <div class="btn_like_icone"><i class="far fa-heart"></i> 
+                </div>
+               </div>    
              </div>
            </a> 
          </div>
@@ -124,7 +132,10 @@
              <div class="legende_restaurants">                 
                <h4>Le délice des sens</h4>
                <p>Folie-Méricourt</p>
-               <i class="far fa-heart"></i>
+               <div class="btn_like">
+                 <div class="btn_like_icone"><i class="far fa-heart"></i> 
+                </div>
+               </div>    
              </div>
            </a>   
          </div> 

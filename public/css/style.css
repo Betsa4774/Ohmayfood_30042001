@@ -1,24 +1,86 @@
 @media all and (max-width: 767px) {
   .bloc_page {
-    width: 100%;
+    width: 98%;
+    background-color: #f2f2f2;
   }
 
+  .loader {
+    width: 90vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .loader__animation {
+    border-top: 10px solid #ff79da;
+    border-bottom: 10px solid #99e2d0;
+    border-left: 10px solid #9356DC;
+    border-right: 10px solid #faeb9f;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vw;
+    -webkit-animation: spin 3s ease 1s both;
+    -o-animation: spin 3s ease 1s both;
+    animation: spin 3s ease 1s both;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+      height: 0;
+    }
+  }
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      opacity: 0;
+      height: 0;
+    }
+  }
   header {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+  }
+  header a {
+    position: absolute;
+    left: 23px;
+    top: 95px;
+    color: black;
   }
   header > div {
+    background-color: #e6e6e6;
+    box-shadow: 5px 5px 3px #dddada;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    box-shadow: none;
+    margin-left: 25px;
+  }
+  header #ubication {
     display: flex;
     justify-content: center;
   }
-  header > div form {
+  header #ubication form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 25px;
+    margin: 15px;
   }
-  header > div form input {
+  header #ubication form input {
     border: none;
     font-weight: bolder;
     font-size: 0.8em;
@@ -52,14 +114,13 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
-    width: 60%;
-    height: 50px;
-    padding: 3px;
+    width: 45%;
+    padding: 18px;
   }
   #information h1 + p + a:hover {
     background: #ff7cdb;
     border-radius: 25px;
-    box-shadow: inset 5px aqua;
+    box-shadow: 5px 5px 3px #9356DC;
   }
 
   #list {
@@ -80,19 +141,29 @@
     margin-bottom: 25px;
   }
   #list h2 + ul li > div {
-    background-color: #b7c3c3;
-    border-radius: 15%;
+    background-color: #eeeeee;
+    box-shadow: 5px 5px 3px #dddada;
+    border-radius: 15px;
     width: 60%;
-    margin-left: -15px;
+    margin-left: 5px;
     box-sizing: content-box;
+    padding-top: 15px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 50px;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
   }
   #list h2 + ul li i {
-    color: gray;
     margin: 5px 15px;
+    padding: 0px 15px;
     width: 5%;
+    color: #878788;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
   }
-  #list h2 + ul li span {
-    background-color: orange;
+  #list h2 + ul li i:hover {
+    color: #9356DC;
   }
   #list h2 + ul li p {
     background-color: #9356DC;
@@ -100,8 +171,10 @@
     width: 4%;
     text-align: center;
     color: #f2f2f2;
-    margin: 5px;
+    margin-top: 20px;
+    margin-left: 10px;
     padding: 3px;
+    position: absolute;
   }
 }
 #restaurants {
@@ -115,7 +188,7 @@
 .cartes_restaurants {
   background-color: #FFFF;
   object-fit: contain;
-  width: 95%;
+  width: 90%;
 }
 
 .cartes_restaurants a {
@@ -126,7 +199,7 @@
 .cartes_restaurants span {
   background-color: aqua;
   position: absolute;
-  right: 5%;
+  right: 10px;
   color: green;
   margin-top: 20px;
   height: 30px;
@@ -134,14 +207,13 @@
   align-items: center;
   font-weight: bold;
   font-size: "Roboto";
-  padding: 0 10px;
+  padding: 0px 10px;
 }
 
 .cartes_restaurants img {
   width: 100%;
   object-fit: cover;
-  height: 50vw;
-  object-fit: cover;
+  height: 50vh;
   border-radius: 8px 8px 0 0;
 }
 .cartes_restaurants img + div {
@@ -159,12 +231,41 @@
   color: black;
   line-height: 1em;
 }
-.cartes_restaurants img + div h4 + p + i {
-  color: #595b5e;
+
+.btn_like_icone {
+  color: gray;
+  font-size: 1.5em;
+  position: relative;
+  right: -48px;
+  bottom: 52px;
+  z-index: 2;
+}
+
+.btn_like--rempli {
+  color: fuchsia;
+  font-size: 1.5em;
   position: absolute;
-  right: 45px;
-  top: 40px;
-  font-size: 2em;
+  right: 39px;
+  top: 59px;
+  right: 50px;
+  z-index: 1;
+}
+
+#btn_comander {
+  background: linear-gradient(#ff79dA, #9356DC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  border-radius: 30px;
+  width: 45%;
+  padding: 18px;
+}
+#btn_comander:hover {
+  background: #ff7cdb;
+  border-radius: 25px;
+  box-shadow: 5px 5px 3px #9356DC;
 }
 
 .footer {
