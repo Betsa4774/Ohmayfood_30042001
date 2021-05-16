@@ -1,0 +1,76 @@
+@mixin btn_like {
+    font-size: 1.5em;
+        //   font-family: $font-icon;
+        position: relative; 
+        display: flex;
+        justify-content: center;          
+        // left: 155px; 
+        bottom: 10px;         
+        right: -200px;
+        z-index: 3;
+       
+
+        >input {
+            //   position: relative;
+             position: absolute;
+           opacity: 0;
+              width: 0;
+              height: 0;
+           z-index: 1;
+           &:checked {
+               position: absolute;
+                top: 0;
+                //   top: 0; left: 0; right: 0; bottom: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 400ms linear;
+
+             +.far {
+                    opacity: 0;
+                   +.fas {
+                       opacity: 1;
+                       z-index: 4;
+                    }
+                }
+        }
+    }    
+   .far { //heart vide
+         opacity: 1;
+         position: absolute;
+         cursor: pointer;
+         transition: 1s linear;
+        }   
+        .fas { //heart plein
+           // include bg-button;
+         cursor: pointer;
+         background: linear-gradient(#ff79dA, #9356DC);
+         -webkit-background-clip: text;
+         color: transparent;
+         opacity: 0;
+         transition: 1s linear;
+        }
+}
+
+@mixin btn_a {
+    background: linear-gradient(#ff79dA, #9356DC);
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;                       
+    color: $color-text;
+    border-radius: 30px;
+    width: 45%;                  
+    padding: nth($padding-dimensions,3);                                     
+    
+    &:hover { //au survol                    
+        background: lighten($color-secondary,0.5);                     
+        border-radius: 25px; 
+        box-shadow: 5px 5px 3px #9356DC;   
+                       
+    }        
+
+    
+}

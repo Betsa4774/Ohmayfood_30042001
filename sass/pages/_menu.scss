@@ -1,0 +1,21 @@
+
+
+// .menu {
+//     color: red;
+// }
+.arrow{
+a { //arrow
+    position: absolute;
+    left: 23px;
+    top:60px;
+    color: black;         
+}
+}
+.menu__carte--legende {
+    // font-family:;$font-titres1;
+     & h1 {
+        //  font-size: 1rem;
+         font-family: $font-titres;
+
+}
+}

@@ -1,13 +1,25 @@
+.arrow a {
+  position: absolute;
+  left: 23px;
+  top: 60px;
+  color: black;
+}
+
+.menu__carte--legende h1 {
+  font-family: "Shrikhand", cursive;
+}
+
 @media all and (max-width: 767px) {
   .bloc_page {
     width: 98%;
     background-color: #f2f2f2;
+    position: relative;
   }
 
   .loader {
     width: 90vw;
     height: 100vh;
-    position: relative;
+    position: absolute;
   }
 
   .loader__animation {
@@ -18,15 +30,16 @@
     border-radius: 50%;
     width: 10vh;
     height: 10vw;
-    -webkit-animation: spin 3s ease 1s both;
-    -o-animation: spin 3s ease 1s both;
-    animation: spin 3s ease 1s both;
+    -webkit-animation: spin 1.5s ease 1s both;
+    -o-animation: spin 1.5s ease 1s both;
+    animation: spin 1.5s ease 1s both;
     margin: auto;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: #a3cf92;
   }
 
   @keyframes spin {
@@ -40,35 +53,41 @@
       height: 0;
     }
   }
-  @-webkit-keyframes spin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
+  .transition-delay-1 {
+    animation: animation-delay 0.4s 1.5s linear both;
+  }
+
+  .transition-delay-2 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 1.7s both;
+  }
+
+  .transition-delay-3 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 2s both;
+  }
+
+  @keyframes animation-delay {
+    from {
       opacity: 0;
-      height: 0;
+    }
+    90% {
+      transform: scale(1.08);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
   header {
     width: 100%;
   }
-  header a {
-    position: absolute;
-    left: 23px;
-    top: 95px;
-    color: black;
-  }
   header > div {
-    background-color: #e6e6e6;
-    box-shadow: 5px 5px 3px #dddada;
+    background-color: #ece9e9;
+    border: 1px solid #835858;
     padding-top: 25px;
-    padding-bottom: 25px;
     display: flex;
     justify-content: center;
-    box-shadow: none;
-    margin-left: 25px;
   }
   header #ubication {
     display: flex;
@@ -95,7 +114,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: "Roboto", sans-serif;
     margin-bottom: 0;
   }
@@ -103,7 +122,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: "Roboto", sans-serif;
   }
   #information h1 + p + a {
@@ -185,21 +204,58 @@
   text-decoration: none;
 }
 
-.cartes_restaurants {
+.carte_restaurants {
   background-color: #FFFF;
   object-fit: contain;
-  width: 90%;
-}
-
-.cartes_restaurants a {
-  text-decoration: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: 70%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.carte_restaurants img {
+  width: 100%;
+  object-fit: cover;
+  height: 35vh;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.carte_restaurants_legende {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  padding-bottom: 5%;
+}
+.carte_restaurants_legende_title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.carte_restaurants_legende_title h4 {
+  font-size: 1.3em;
+  margin-top: 7px;
+  background-color: green;
+}
+.carte_restaurants_legende_title p {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+  background-color: orange;
+  position: absolute;
+  top: 25px;
 }
 
-.cartes_restaurants span {
+.carte_restaurants span {
   background-color: aqua;
   position: absolute;
-  right: 10px;
+  right: 30px;
+  top: 25px;
   color: green;
   margin-top: 20px;
   height: 30px;
@@ -210,45 +266,52 @@
   padding: 0px 10px;
 }
 
-.cartes_restaurants img {
-  width: 100%;
-  object-fit: cover;
-  height: 50vh;
-  border-radius: 8px 8px 0 0;
-}
-.cartes_restaurants img + div {
-  background-color: white;
-}
-.cartes_restaurants img + div h4 {
-  color: black;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-.cartes_restaurants img + div h4 + p {
-  font-size: 1.1em;
-  font-family: "Roboto", sans-serif;
-  color: black;
-  line-height: 1em;
-}
-
-.btn_like_icone {
-  color: gray;
+.btn_like_heart {
   font-size: 1.5em;
   position: relative;
-  right: -48px;
-  bottom: 52px;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+  right: -200px;
+  z-index: 3;
 }
-
-.btn_like--rempli {
-  color: fuchsia;
-  font-size: 1.5em;
+.btn_like_heart > input {
   position: absolute;
-  right: 39px;
-  top: 59px;
-  right: 50px;
+  opacity: 0;
+  width: 0;
+  height: 0;
   z-index: 1;
+}
+.btn_like_heart > input:checked {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 400ms linear;
+}
+.btn_like_heart > input:checked + .far {
+  opacity: 0;
+}
+.btn_like_heart > input:checked + .far + .fas {
+  opacity: 1;
+  z-index: 4;
+}
+.btn_like_heart .far {
+  opacity: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: 1s linear;
+}
+.btn_like_heart .fas {
+  cursor: pointer;
+  background: linear-gradient(#ff79dA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: 1s linear;
 }
 
 #btn_comander {
@@ -275,7 +338,7 @@
 .footer h2 {
   color: #f2f2f2;
   font-family: "Shrikhand", cursive;
-  font-size: 1.1em;
+  font-size: 1em;
   padding: 10px;
   margin-bottom: 0;
 }
