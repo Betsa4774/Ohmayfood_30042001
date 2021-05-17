@@ -84,7 +84,7 @@
   }
   header > div {
     background-color: #ece9e9;
-    border: 1px solid #835858;
+    border: 1px solid #d6d5d5;
     padding-top: 25px;
     display: flex;
     justify-content: center;
@@ -240,13 +240,11 @@
 .carte_restaurants_legende_title h4 {
   font-size: 1.3em;
   margin-top: 7px;
-  background-color: green;
 }
 .carte_restaurants_legende_title p {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
   margin-top: 20px;
-  background-color: orange;
   position: absolute;
   top: 25px;
 }

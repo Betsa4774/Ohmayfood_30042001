@@ -87,7 +87,7 @@
 
         >div { //Carte et logo 
             background-color: #ece9e9;
-            border: 1px solid #835858;
+            border: 1px solid #d6d5d5;
              padding-top: 25px;
             // padding-bottom: 25px;
             display: flex;
@@ -261,14 +261,12 @@
                 width: 40%;
              & h4 { 
                 font-size: nth($taille-lettre,4);
-                 margin-top: 7px;
-                 background-color: green;                 
+                 margin-top: 7px;                          
                  }
              & p {//text
                   font-size: nth($taille-lettre,3);
                   font-family: $font-text;                   
-                  margin-top: 20px;  
-                  background-color: orange;
+                  margin-top: 20px;                   
                   position: absolute;
                   //  top: 50%;
                   top: 25px;
@@ -356,28 +354,7 @@
        }
     
    
-    }  
-   
-    
-    // page menu1 -La palette du gout
-    
-    // .carte__menu {
-    //     h1 {
-    //         color: red;
-    //     }
-    // }
-//    header {
-//        display: flex;
-//        flex-direction: row;
-//        align-content: flex-start;
-
-//        +div {
-//        display: flex;
-//        flex-direction: row;
-//        align-content: flex-start;
-//        }
-//    }
-    
+    }        
 
 } 
    
