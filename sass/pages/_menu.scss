@@ -1,21 +1,147 @@
 
 
-// .menu {
-//     color: red;
-// }
-.arrow{
-a { //arrow
-    position: absolute;
-    left: 23px;
-    top:60px;
-    color: black;         
-}
-}
-.menu__carte--legende {
-    // font-family:;$font-titres1;
-     & h1 {
-        //  font-size: 1rem;
-         font-family: $font-titres;
+// header + fléche
+.header_fleche {
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;   
+    padding: 0; 
+    a {        
+        text-decoration: none;
+        color: black;
+        font-family: $font-titres; 
+        font-size: nth($taille-lettre,3);
+        padding: nth($padding-dimensions,3);
+        }
 
+    i {      
+        position: absolute;
+        left: 30px;
+        font-size: nth($taille-lettre,4);      
+    }   
 }
+// legende de la photo
+.carte_restaurant {
+    background-color: $color-card;
+    object-fit: contain;
+    width: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: auto;
+    // height: 70%;     
+    position: relative; 
+    display: flex;
+    flex-direction: column;   
+    & img {
+         width: 100%;
+         object-fit: cover;
+         height: 40vh;         
+        // border-radius: 8px 8px 0 0;
+        //  overflow: hidden;
+    }
+    &_name {  //titre de la photo
+       background-color:$color-card;           
+       width: 100%;
+       display: flex;
+       flex-direction: row;              
+        //align-items: flex-end;
+       align-items: center;
+       position: absolute;
+       height: 45px;
+       top: 90%;
+    // bottom: 25px;
+       border-radius: 25px 25px 0px 0px;
+        
+        // position: relative;
+        //  justify-content: flex-end;
+        //   padding-right: 5%;
+            padding-top: 5%;
+        //    padding-left: 5%;
+        // //         &_title {
+       // //             position: relative;   
+        // //             display: flex;
+       // //             flex-direction: column;
+        // //             width: 40%;
+        & h4 { 
+           font-size: 1.6rem;
+           font-family: $font-titres;
+           padding-right: 5px;
+        //    margin-top: 7px;  
+    }   }
+   
 }
+// Description de la caete du restaurant
+.menu__description {   // Entrée, plats et desserts
+    background-color: blueviolet;
+    margin-top: 60px;
+    position: relative; //animation
+    overflow: hidden; //animation
+    padding-left: 5px;
+    &__entree h3 {       
+        @include title;       
+    }
+    .menu__description__entree1 {
+        @include menu_carte; 
+        // position: absolute;//animation
+        // right: 600px;      //animation 
+        // animation: menu__description__entree1 0.5s forwards; //animation
+        // animation-delay: 2s;//animation
+        &--name {
+            background: rgb(207, 88, 88);
+            width: 60%;
+        }
+    }
+}
+.menu_description_prix {
+    background-color: green;
+   @include prix;
+}
+
+.menu__description__plats h3 {   
+    @include title;    
+}
+
+ .menu__description__plats1 {
+ @include menu_carte;
+ &--name {
+    background: rgb(207, 88, 88);
+    width: 60%;
+}
+ }
+ .menu__description__desserts h3 {  
+    @include title;
+}
+
+.menu__description__desserts1 {
+    @include menu_carte; 
+    &--name {
+        background: rgb(207, 88, 88);
+        width: 60%;
+    }
+}
+
+ //bouton commander
+  #bouton_comamnder {   
+    a {  @include btn_a;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    }
+}
+//  <a href="#" class="btn_commander"> Commander</a>         
+//  <div class="bouton">
+// animations
+@-webkit-keyframes menu__description__entree1 {
+    100% { right: 0; }
+}
+
+@keyframes menu__description__entree1 {
+    100% { right: 0; }
+}
+
+
+

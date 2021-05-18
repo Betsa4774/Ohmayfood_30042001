@@ -1,14 +1,210 @@
-.arrow a {
-  position: absolute;
-  left: 23px;
-  top: 60px;
+.header_fleche {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  padding: 0;
+}
+.header_fleche a {
+  text-decoration: none;
   color: black;
-}
-
-.menu__carte--legende h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 1em;
+  padding: 18px;
+}
+.header_fleche i {
+  position: absolute;
+  left: 30px;
+  font-size: 1.3em;
 }
 
+.carte_restaurant {
+  background-color: #FFFF;
+  object-fit: contain;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.carte_restaurant img {
+  width: 100%;
+  object-fit: cover;
+  height: 40vh;
+}
+.carte_restaurant_name {
+  background-color: #FFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  height: 45px;
+  top: 90%;
+  border-radius: 25px 25px 0px 0px;
+  padding-top: 5%;
+}
+.carte_restaurant_name h4 {
+  font-size: 1.6rem;
+  font-family: "Shrikhand", cursive;
+  padding-right: 5px;
+}
+
+.menu__description {
+  background-color: blueviolet;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  padding-left: 5px;
+}
+.menu__description__entree h3 {
+  font-size: 1rem;
+  border-bottom: 3px solid aqua;
+  width: 10%;
+}
+.menu__description .menu__description__entree1 {
+  background-color: pink;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5%;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.menu__description .menu__description__entree1--name {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.menu__description .menu__description__entree1 h4 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.menu__description .menu__description__entree1 p {
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  line-height: 0;
+}
+.menu__description .menu__description__entree1--name {
+  background: #cf5858;
+  width: 60%;
+}
+
+.menu_description_prix {
+  background-color: green;
+  position: relative;
+  justify-content: flex-end;
+  left: 130px;
+}
+.menu_description_prix span {
+  position: relative;
+  top: 32px;
+  font-size: 1em;
+}
+
+.menu__description__plats h3 {
+  font-size: 1rem;
+  border-bottom: 3px solid aqua;
+  width: 10%;
+}
+
+.menu__description__plats1 {
+  background-color: pink;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5%;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.menu__description__plats1--name {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.menu__description__plats1 h4 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.menu__description__plats1 p {
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  line-height: 0;
+}
+.menu__description__plats1--name {
+  background: #cf5858;
+  width: 60%;
+}
+
+.menu__description__desserts h3 {
+  font-size: 1rem;
+  border-bottom: 3px solid aqua;
+  width: 10%;
+}
+
+.menu__description__desserts1 {
+  background-color: pink;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5%;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.menu__description__desserts1--name {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.menu__description__desserts1 h4 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.menu__description__desserts1 p {
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  line-height: 0;
+}
+.menu__description__desserts1--name {
+  background: #cf5858;
+  width: 60%;
+}
+
+#bouton_comamnder a {
+  background: linear-gradient(#ff79dA, #9356DC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  border-radius: 30px;
+  width: 45%;
+  padding: 18px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+#bouton_comamnder a:hover {
+  background: #ff7cdb;
+  border-radius: 25px;
+  box-shadow: 5px 5px 3px #9356DC;
+}
+
+@-webkit-keyframes menu__description__entree1 {
+  100% {
+    right: 0;
+  }
+}
+@keyframes menu__description__entree1 {
+  100% {
+    right: 0;
+  }
+}
 @media all and (max-width: 767px) {
   .bloc_page {
     width: 98%;
@@ -163,7 +359,7 @@
     background-color: #eeeeee;
     box-shadow: 5px 5px 3px #dddada;
     border-radius: 15px;
-    width: 60%;
+    width: 90%;
     margin-left: 5px;
     box-sizing: content-box;
     padding-top: 15px;
@@ -310,23 +506,6 @@
   color: transparent;
   opacity: 0;
   transition: 1s linear;
-}
-
-#btn_comander {
-  background: linear-gradient(#ff79dA, #9356DC);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #f2f2f2;
-  border-radius: 30px;
-  width: 45%;
-  padding: 18px;
-}
-#btn_comander:hover {
-  background: #ff7cdb;
-  border-radius: 25px;
-  box-shadow: 5px 5px 3px #9356DC;
 }
 
 .footer {

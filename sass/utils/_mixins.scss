@@ -7,15 +7,14 @@
         // left: 155px; 
         bottom: 10px;         
         right: -200px;
-        z-index: 3;
-       
+        z-index: 3;      
 
         >input {
-            //   position: relative;
-             position: absolute;
+           //   position: relative;
+           position: absolute;
            opacity: 0;
-              width: 0;
-              height: 0;
+           width: 0;
+           height: 0;
            z-index: 1;
            &:checked {
                position: absolute;
@@ -54,7 +53,7 @@
         }
 }
 
-@mixin btn_a {
+@mixin btn_a { //bouton explorez nos restaurants
     background: linear-gradient(#ff79dA, #9356DC);
     display: flex;  
     justify-content: center;
@@ -70,7 +69,50 @@
         border-radius: 25px; 
         box-shadow: 5px 5px 3px #9356DC;   
                        
-    }        
+    }       
+}
+//scss.menu pour menu1.html
+ @mixin title { //Entrees, plats et desserts
+    font-size:  1rem;
+    border-bottom: 3px solid aqua;
+    width: 10%;         
+}
 
-    
+@mixin menu_carte {
+      background-color: pink;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5%;
+    padding: 10px;
+    margin-bottom: 25px;
+    &--name {          
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    h4 {
+        // font-size: nth($taille-lettre,4);
+        font-size: 1.2em;
+        // font-family:$font-text;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    p {
+        font-size: 0.9em;
+        font-family: $font-text;
+        line-height: 0;
+    }
+}
+
+
+@mixin prix {   
+    position: relative;
+    justify-content: flex-end;
+    left: 130px;   
+    span {          
+        position: relative;
+        top: 32px;
+        font-size: nth($taille-lettre,3);       
+    }
 }

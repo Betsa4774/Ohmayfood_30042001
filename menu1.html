@@ -22,111 +22,199 @@
  <body class="bloc_page">    
      <!--En tête de page-->
      <header> <!--logo--> 
-         <div class="arrow">
+        <div class="header_fleche">
+            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+          <h1 class="header_fleche_logo"><a href="index.html">ohmyfood</a> </h1>
+        </div>
+         <!--<div class="arrow">
              <a href="index.html"><i class="fas fa-arrow-left"></i></a>       
          </div>
          <div class="logo">                     
-            <!-- <img src="\images\ohmyfood@2x.svg" alt="logo">-->
-            <h1>ohmyfood</h1>
-         </div>            
+            <img src="\images\ohmyfood@2x.svg" alt="logo">
+            
+         </div>-->            
      </header>
      <!--Corps du Menu-->
-     <main>
-         <section class="menu">
-              <div class="menu__carte">
-                 <!-- <img src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="rondeco">-->
-                 <div class="menu__carte--legende">
-                     <h1>La palette du gout</h1>
-                     <i class="far fa-heart"></i>       
+     <main> 
+        <section class="carte">
+         <div class="carte_restaurant">           
+             <img src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="rondeco">
+             <div class="carte_restaurant_name">
+                 <h4>La palette du goût</h4>                                  
+                  <label class="btn_like_heart">
+                     <input type="checkbox"/>
+                     <i class="far fa-heart"></i> 
+                     <i class="fas fa-heart"></i>
+                 </label>   
+             </div>       
+         </div>
+          <!-- Description de la carte menu -->
+          <div class="menu__description">
+            <div class="menu__description__entree">
+             <h3>ENTRÉES</h3>
+             <!--entree1-->
+             <div class="menu__description__entree1"> 
+               <div class="menu__description__entree1--name">
+                 <h4>Fricassée d'escargot</h4>
+                 <p>Au piment d'espelette </p>
+               </div> 
+               <div class="menu_description_prix">
+                 <span class="prix"> 25€</span> 
+                 <div class="menu_description_prix_check">
+                   <i></i>                           
                  </div>
+               </div>  
              </div>
-             <div class="menu__description">
-                 <div class="menu__description__entree">
-                     <h3>ENTRÉES</h3>
-                     <div class="menu__description__entree--name">
-                         <H4>Fricassée d'escargot</H4>
-                         <p>Au piment d'espelette <span class="prix"> 25€</span></p>  
-                     </div>          
-                     <div class="menu__description__entree--name">
-                          <H4>Foie gras de canard mi-cuit</H4>
-                         <p>Et ses copeaux de truffe noire  35€</p>  
-                     </div>                
-                     <a href="">
-                         <div class="coche">                        
-                             <div class="menu__description__entree--name">
-                                 <H4>Oeuf au plat</H4>
-                                 <p>Assaisonné à la truffe sur lit de... 20€</p> 
-                                 <i class="fas fa-check-circle"></i> 
-                             </div>  
-                         </div>
-                     </a>                                      
+              <!--entree2-->
+              <div class="menu__description__entree1"> 
+                <div class="menu__description__entree1--name">
+                  <h4>Foie gras de canard mi-cuit</h4>
+                  <p>Et ses copeaux de truffe noire</p>
+                </div>
+                <div class="menu_description_prix">
+                  <span class="prix"> 35€</span> 
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+                </div>  
+              </div>  
+              <!--entree3-->                             
+              <!--<a href="">-->
+              <!--<div class="coche">-->          
+              <div class="menu__description__entree1"> 
+                <div class="menu__description__entree1--name">
+                  <h4>Oeuf au plat</h4>
+                  <p>Assaisonné à la truffe sur lit de...</p>
+                </div>
+                <div class="menu_description_prix">
+                 <span class="prix"> 20€</span> 
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+                </div>  
+                <!--<i class="fas fa-check-circle"></i>-->
+              </div>  
+              <!--</div>-->
+              <!--</a>-->                                      
+            </div>
+            <!-- Plats -->
+            <div class="menu__description__plats">
+              <h3>PLATS</h3>
+              <!-- plat1 -->
+              <div class="menu__description__plats1"> 
+                <div class="menu__description__plats1--name">
+                  <H4>Filet de boeuf aux herbes</H4>
+                  <p>Accompagné de sa ribambelle de légu...</p>  
+                </div>  
+                <div class="menu_description_prix">
+                  <span class="prix"> 40€</span>  
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+                </div>  
+              </div> 
+              <!--plat2  -->
+              <div class="menu__description__plats1"> 
+                <div class="menu__description__plats1--name">
+                  <H4>Parmentier de queue de boeuf</H4>
+                  <p>À la truffe noire sur sa purée de panais</p>  
+                </div>   
+                <div class="menu_description_prix">
+                  <span class="prix"> 35€</span>  
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+                </div>  
+              </div>  
+              <!-- plat3 -->
+              <div class="menu__description__plats1"> 
+                <div class="menu__description__plats1--name">
+                  <H4>Filet de Turbot</H4>
+                  <p>Aux agrumes</p>  
+                </div>  
+                <div class="menu_description_prix">
+                  <span class="prix"> 44€</span>  
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+                </div>
+             </div> 
+            </div>                     
+            <!-- Desserts -->
+            <div class="menu__description__desserts">
+              <h3>DESSERTS</h3>
+              <!-- dessert1 -->
+              <div class="menu__description__desserts1">
+               <div class="menu__description__desserts1--name">
+                 <H4>Paris-Brest</H4>
+                 <p>Revisité</p>  
+               </div>                 
+               <div class="menu_description_prix">
+                  <span class="prix"> 18€</span>  
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
                  </div>
-
-                 <div class="plats">
-                    <h3>PLATS</h3>
-                    <div class="menu__description__plats--name">
-                        <H4>Filet de boeuf aux herbes</H4>
-                        <p>Accompagné de sa ribambelle de légu... 40€</p>  
-                    </div>          
-                    <div class="menu__description__plats--name">
-                        <H4>Parmentier de queue de boeuf</H4>
-                        <p>À la truffe noire sur sa purée de panais 35€</p>  
-                    </div>                                          
-                    <div class="menu__description__plats--name">
-                        <H4>Filet de Turbot</H4>
-                        <p>Aux agrumes 44€</p>  
-                    </div>                                        
-                </div> 
-                
-                <div class="desserts">
-                    <h3>DESSERTS</h3>
-                    <div class="menu__description__desserts--name">
-                        <H4>Paris-Brest</H4>
-                        <p>Revisité 18€</p>  
-                    </div>          
-                    <div class="menu__description__desserts--name">
-                        <H4>Macaron au chocolat d'exception</H4>
-                        <p>Et glace à la vanille de Madagascar 22€</p>  
-                    </div>                                          
-                    <div class="menu__description__desserts--name">
-                        <H4>Mousse au chocolat</H4>
-                        <p>Au piment d'espellette et à la truffe noire 23€</p>  
-                    </div>                                        
-                </div> 
-            </div>
-
-            <div id="bouton_comamnder">
-                <a href="#" class="btn_comander"> Commander</a>         
-                <div class="bouton">
-               </div>
-            </div>
-         </section>
-     </main>
-     <!--Last section-->   
-     <footer class="footer">
-        <h2 class="title__footer">ohmyfood</h2>
-        <div class="info__footer" >  
-          <ul>
-            <li> 
-              <a href="#">     
-                <i class="fas fa-utensils"></i> 
-                 Proposer un restaurant
-              </a>
-            </li>
-            <li>
-              <a href="#">
-               <i class="fas fa-hands-helping"></i> 
-               Dévenir partenaire
-              </a>
-            </li>
-              
-            <li>
-              <a href="#"> Mentions légales</a></li>
-            <li>
-              <a href="mailto:betsabe.poudevigne@gmail.com"> Contact</a></li>
-          </ul>        
-        </div>
-      </footer>   
+               </div>  
+              </div>         
+              <!-- dessert2 -->
+              <div class="menu__description__desserts1">
+               <div class="menu__description__desserts1--name">
+                 <H4>Macaron au chocolat d'exception</H4>
+                 <p>Et glace à la vanille de Madagascar</p>  
+               </div>  
+               <div class="menu_description_prix">
+                 <span class="prix"> 22€</span>  
+                 <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+               </div>  
+              </div>                                       
+              <!--dessert3-->
+             <div class="menu__description__desserts1">
+               <div class="menu__description__desserts1--name">
+                 <H4>Mousse au chocolat</H4>
+                        <p>Au piment d'espellette et à la truffe noire </p>  
+               </div>    
+                <div class="menu_description_prix">
+                  <span class="prix"> 23€</span>  
+                  <div class="menu_description_prix_check">
+                    <i></i>                           
+                  </div>
+                </div>  
+              </div>                                     
+            </div> 
+          </div>
+        </section>
+      <!-- Bouton commander-->  
+      <!--  <a href="restaurants" class="btn"> Eplorez nos restaurants</a>   -->
+      <div id="bouton_comamnder">
+        <a href="#" class="btn_commander"> Commander</a>         
+      </div>      
+   </main>
+    <!--Last section-->   
+    <footer class="footer">
+      <h2 class="title__footer">ohmyfood</h2>
+      <div class="info__footer" >  
+        <ul>
+          <li> 
+            <a href="#">     
+              <i class="fas fa-utensils"></i> 
+              Proposer un restaurant
+            </a>
+         </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-hands-helping"></i> 
+              Dévenir partenaire
+             </a>
+          </li>              
+          <li>
+            <a href="#"> Mentions légales</a></li>
+          <li>
+            <a href="mailto:betsabe.poudevigne@gmail.com"> Contact</a></li>
+       </ul>        
+      </div>
+    </footer>   
   </body>
  </html>
    
