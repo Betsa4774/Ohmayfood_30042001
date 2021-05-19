@@ -58,7 +58,7 @@
         // position: relative;
         //  justify-content: flex-end;
         //   padding-right: 5%;
-            padding-top: 5%;
+            // padding-top: 5%;check
         //    padding-left: 5%;
         // //         &_title {
        // //             position: relative;   
@@ -66,16 +66,24 @@
        // //             flex-direction: column;
         // //             width: 40%;
         & h4 { 
-           font-size: 1.6rem;
+           font-size: 1.4rem;
            font-family: $font-titres;
            padding-right: 5px;
+           padding-top: 10px;
+        //    width: 50%;
         //    margin-top: 7px;  
     }   }
    
 }
+.btn_like_heart {
+    background-color: aqua;
+    // right: -100px; ne s'applique
+}
+
+
 // Description de la caete du restaurant
 .menu__description {   // Entrée, plats et desserts
-    background-color: blueviolet;
+    background-color: rgb(158, 135, 179);
     margin-top: 60px;
     position: relative; //animation
     overflow: hidden; //animation
@@ -90,15 +98,28 @@
         // animation: menu__description__entree1 0.5s forwards; //animation
         // animation-delay: 2s;//animation
         &--name {
-            background: rgb(207, 88, 88);
+            background: rgb(190, 82, 82);
             width: 60%;
+            +div { //prix des entrées
+                @include prix;
+                
+        
+                
+                   
+               
+
+               
+            //   
+            }
+
         }
     }
+
 }
-.menu_description_prix {
-    background-color: green;
-   @include prix;
-}
+// .menu_description_prix {
+//     background-color: green;
+//    @include prix;
+// }
 
 .menu__description__plats h3 {   
     @include title;    
