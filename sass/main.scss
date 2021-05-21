@@ -11,12 +11,11 @@
 //     margin: 0;
 //     padding: 0;
 // }
-@media all and (max-width: 767px) {
+@media all and (max-width: 500px) {
     .bloc_page {
         width: 98%;
         background-color: #f2f2f2;
-        position: relative;
-        
+        position: relative;        
     }   
     // mise en forme du loader
      .loader {         
@@ -82,8 +81,12 @@
         }
       }
     // Début du site
+    // .main {
+    //     width: 67%;
+    
     header { 
-        width: 100%;         
+         width: 100%;         
+        // width: 67%;//main
 
         >div { //Carte et logo 
             background-color: #ece9e9;
@@ -121,6 +124,7 @@
     }
 
     #information{
+        // width: 67%;//main
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -153,6 +157,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        // width: 67%;//main
         h2 { //titre
             margin: nth($margin-dimensions,2);              
 
@@ -170,6 +175,7 @@
                         box-shadow: 5px 5px 3px #dddada;  
                         border-radius: 15px;
                         width: 90%;
+                        // width: 67%;//main
                         margin-left: 5px;
                         box-sizing: content-box;                       
                         padding-top: 15px;
@@ -177,7 +183,7 @@
                         margin-left: 10px; 
                         height: 50px;
                         -webkit-transition: color 0.5s;
-                         transition: color 0.5s;                   
+                        transition: color 0.5s;                   
                     }
                                                            
                       i {//icones                       
@@ -220,6 +226,7 @@
    //Restaurants//
 
   #restaurants {
+    //   width: 67%;//main
        padding-left: 15px;
    }
     .restaurants_list {
@@ -228,14 +235,24 @@
     .carte_restaurants {
         background-color: $color-card;
         object-fit: contain;
-        width: 100%;
+        width: 100%;        
         margin-left: auto;
         margin-right: auto;
         margin-bottom: auto;
         height: 70%;     
         position: relative; 
         display: flex;
-        flex-direction: column;                       
+        flex-direction: column;  
+        > a {
+            text-decoration: none;
+            color: transparent;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
         & img {
             width: 100%;
             object-fit: cover;
@@ -258,7 +275,8 @@
                 position: relative;   
                 display: flex;
                 flex-direction: column;
-                width: 40%;
+                width: 57%;
+                // width: 60%;//main
              & h4 { 
                 font-size: nth($taille-lettre,4);
                  margin-top: 7px; 
@@ -299,6 +317,7 @@
    }
  
   .footer {
+    //   width: 67%;//main
         background-color:#212020;
         height: 130px;
         
@@ -338,7 +357,7 @@
     
    
     }        
-
+// } //main
 } 
    
     

@@ -1,3 +1,11 @@
+.menu_description_prix_check {
+  background-color: #64e7e7;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 0px;
+}
+
 .header_fleche {
   display: flex;
   flex-direction: row;
@@ -56,54 +64,82 @@
 }
 
 .menu__description {
-  background-color: #9e87b3;
+  background-color: #9179a8;
   margin-top: 60px;
   position: relative;
   overflow: hidden;
   padding-left: 5px;
 }
+
 .menu__description__entree h3 {
   font-size: 1rem;
   border-bottom: 3px solid aqua;
   width: 10%;
 }
-.menu__description .menu__description__entree1 {
-  background-color: pink;
-  width: 90%;
+
+.menu__description__entree1 {
+  background-color: #f2f2f2;
+  width: 93%;
   display: flex;
   flex-direction: row;
-  border-radius: 5%;
-  padding: 10px;
-  margin-bottom: 25px;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
-.menu__description .menu__description__entree1--name {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
+.menu__description__entree1--name {
+  background-color: #bb7676;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 2%;
 }
-.menu__description .menu__description__entree1 h4 {
+.menu__description__entree1 h4 {
   font-size: 1.2em;
   margin-bottom: 0;
   margin-top: 5px;
 }
-.menu__description .menu__description__entree1 p {
-  font-size: 0.9em;
+.menu__description__entree1 p {
+  font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   line-height: 0;
 }
-.menu__description .menu__description__entree1--name {
-  background: #be5252;
-  width: 60%;
-}
-.menu__description .menu__description__entree1--name + div {
-  background-color: #a4b3a4;
+
+.menu_description_prix {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: white;
+  font-size: 1.2em;
   position: relative;
+  margin-left: 3%;
 }
-.menu__description .menu__description__entree1--name + div span {
-  background-color: #7171a3;
-  position: absolute;
-  bottom: 4px;
-  left: 60px;
+.menu_description_prix p {
+  color: black;
+  font-weight: bold;
+  margin-right: 2%;
+}
+.menu_description_prix .menu_description_prix_check {
+  background-color: #64e7e7;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 1%;
+  display: flex;
+}
+.menu_description_prix .menu_description_prix_check i {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 70px;
+  justify-content: center;
+  font-size: 1.3em;
+  opacity: 1;
+  overflow: hidden;
+  transform: rotate(0deg);
+  transition: transform 500ms ease-in-out;
 }
 
 .menu__description__plats h3 {
@@ -113,18 +149,23 @@
 }
 
 .menu__description__plats1 {
-  background-color: pink;
-  width: 90%;
+  background-color: #f2f2f2;
+  width: 93%;
   display: flex;
   flex-direction: row;
-  border-radius: 5%;
-  padding: 10px;
-  margin-bottom: 25px;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 .menu__description__plats1--name {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
+  background-color: #bb7676;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 2%;
 }
 .menu__description__plats1 h4 {
   font-size: 1.2em;
@@ -132,13 +173,9 @@
   margin-top: 5px;
 }
 .menu__description__plats1 p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   line-height: 0;
-}
-.menu__description__plats1--name {
-  background: #cf5858;
-  width: 60%;
 }
 
 .menu__description__desserts h3 {
@@ -148,18 +185,23 @@
 }
 
 .menu__description__desserts1 {
-  background-color: pink;
-  width: 90%;
+  background-color: #f2f2f2;
+  width: 93%;
   display: flex;
   flex-direction: row;
-  border-radius: 5%;
-  padding: 10px;
-  margin-bottom: 25px;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 .menu__description__desserts1--name {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
+  background-color: #bb7676;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 2%;
 }
 .menu__description__desserts1 h4 {
   font-size: 1.2em;
@@ -167,13 +209,9 @@
   margin-top: 5px;
 }
 .menu__description__desserts1 p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   line-height: 0;
-}
-.menu__description__desserts1--name {
-  background: #cf5858;
-  width: 60%;
 }
 
 #bouton_comamnder a {
@@ -207,7 +245,7 @@
     right: 0;
   }
 }
-@media all and (max-width: 767px) {
+@media all and (max-width: 500px) {
   .bloc_page {
     width: 98%;
     background-color: #f2f2f2;
@@ -414,6 +452,16 @@
   display: flex;
   flex-direction: column;
 }
+.carte_restaurants > a {
+  text-decoration: none;
+  color: transparent;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .carte_restaurants img {
   width: 100%;
   object-fit: cover;
@@ -433,7 +481,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 57%;
 }
 .carte_restaurants_legende_title h4 {
   font-size: 1.3em;
@@ -467,8 +515,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  bottom: 10px;
-  right: -200px;
+  left: 30%;
   z-index: 3;
 }
 .btn_like_heart > input {
