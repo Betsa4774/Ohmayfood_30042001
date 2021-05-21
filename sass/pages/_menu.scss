@@ -54,7 +54,7 @@
     // bottom: 25px;
        border-radius: 25px 25px 0px 0px;
       
-        & h4 { 
+        & h4 { //nom du resto
            font-size: 1.4rem;
            font-family: $font-titres;
            padding-right: 5px;
@@ -69,18 +69,21 @@
 }
 // Description de la carte du restaurant
 .menu__description {   // Entrée, plats et desserts
-    background-color: rgb(145, 121, 168);
+    
     margin-top: 60px;
     position: relative; //animation
     overflow: hidden; //animation
     padding-left: 5px;
 }
-.menu__description__entree h3 {       
-    @include title;       
-}
+//cartes d'entrées
 
-.menu__description__entree1 { //carte-entrée
-    @include menu_carte; 
+.menu__description__entree h3 {       
+    @include title;        
+}
+.menu__description__entree { //englobe les 3cartes entrée
+    // @include menu_carte; 
+    background-color: rgb(124, 139, 102);
+    padding-bottom: 3px;
     // position: absolute;//animation
     // right: 600px;      //animation 
     // animation: menu__description__entree1 0.5s forwards; //animation
@@ -88,6 +91,11 @@
     // &--name {
     //     background: rgb(190, 82, 82);   
 }
+.menu__description__entree1 {
+      @include menu_carte; 
+
+}
+
 .menu_description_prix {
     display: flex;
     flex-direction: row;
@@ -130,21 +138,51 @@
     }
   
 }
-.menu__description__plats h3 {   
-    @include title;    
-}
- .menu__description__plats1 {
- @include menu_carte;
- }
+// .menu__description__entree h3 {       
+//     @include title;     
+//     background-color: rgb(114, 190, 114)  
+// }
 
- .menu__description__desserts h3 {  
-    @include title;
-}
-
- .menu__description__desserts1 {
-    @include menu_carte; 
+// .menu__description__entree { //carte-entrée
+//     // @include menu_carte; 
+//     background-color: rgb(124, 139, 102);
+//     // position: absolute;//animation
+//     // right: 600px;      //animation 
+//     // animation: menu__description__entree1 0.5s forwards; //animation
+//     // animation-delay: 2s;//animation
+//     // &--name {
+//     //     background: rgb(190, 82, 82);  
+//}
     
- }
+    //Plats
+
+.menu__description__plats h3 {  //title plats     
+        @include title;     
+        background-color: rgb(106, 141, 106)  
+    }
+.menu__description__plats {//englobe les 3 cartes plats
+     background-color: rgb(110, 143, 143);
+     padding-bottom: 3px;
+}
+.menu__description__plats1 {
+    @include menu_carte;  
+
+}
+
+//Desserts
+.menu__description__desserts h3 { //title dessert
+    background-color: rgb(110, 143, 143); 
+    @include title; 
+}
+.menu__description__desserts {//englobe les 3cartes dessert
+    background-color: rgb(110, 143, 143);
+    padding-bottom: 3px;
+}
+.menu__description__desserts1 {  
+   @include menu_carte;
+    // background-color: rgb(109, 119, 119);
+    
+}
 
 
  //bouton commander

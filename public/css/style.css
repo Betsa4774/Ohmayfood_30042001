@@ -64,7 +64,6 @@
 }
 
 .menu__description {
-  background-color: #9179a8;
   margin-top: 60px;
   position: relative;
   overflow: hidden;
@@ -75,6 +74,11 @@
   font-size: 1rem;
   border-bottom: 3px solid aqua;
   width: 10%;
+}
+
+.menu__description__entree {
+  background-color: #7c8b66;
+  padding-bottom: 3px;
 }
 
 .menu__description__entree1 {
@@ -146,6 +150,12 @@
   font-size: 1rem;
   border-bottom: 3px solid aqua;
   width: 10%;
+  background-color: #6a8d6a;
+}
+
+.menu__description__plats {
+  background-color: #6e8f8f;
+  padding-bottom: 3px;
 }
 
 .menu__description__plats1 {
@@ -179,9 +189,15 @@
 }
 
 .menu__description__desserts h3 {
+  background-color: #6e8f8f;
   font-size: 1rem;
   border-bottom: 3px solid aqua;
   width: 10%;
+}
+
+.menu__description__desserts {
+  background-color: #6e8f8f;
+  padding-bottom: 3px;
 }
 
 .menu__description__desserts1 {
