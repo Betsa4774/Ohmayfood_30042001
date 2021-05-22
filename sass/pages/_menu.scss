@@ -26,74 +26,65 @@
 .carte_restaurant {
     background-color: $color-card;
     object-fit: contain;
-    width: 100%;
-    // margin-left: auto;
-    // margin-right: auto;
-    // margin-bottom: auto;
-    // height: 70%;     
+    width: 100%;   
     position: relative; 
     display: flex;
     flex-direction: column;   
     & img {
          width: 100%;
          object-fit: cover;
-         height: 40vh;         
-        // border-radius: 8px 8px 0 0;
-        //  overflow: hidden;
+         height: 40vh;                
     }
-    &_name {  //titre de la photo
+    &_name {  //carte de la photo
        background-color:$color-card;           
        width: 100%;
        display: flex;
-       flex-direction: row;              
-        //align-items: flex-end;
+       flex-direction: row;        
        align-items: center;
        position: absolute;
        height: 45px;
-       top: 90%;
-    // bottom: 25px;
-       border-radius: 25px 25px 0px 0px;
-      
+       top: 90%;    
+       border-radius: 25px 25px 0px 0px;      
         & h4 { //nom du resto
            font-size: 1.4rem;
            font-family: $font-titres;
            padding-right: 5px;
-           padding-top: 10px;
-        //    width: 50%;
-        //    margin-top: 7px;  
-    }   }
-   
+           padding-top: 10px;   
+        }    
+    }      
 }
 .btn_like_heart {
     background-color: aqua;    
 }
 // Description de la carte du restaurant
-.menu__description {   // Entrée, plats et desserts
-    
+.menu__description {   // Entrée, plats et desserts    
     margin-top: 60px;
-    position: relative; //animation
-    overflow: hidden; //animation
+    // position: relative; //animation
+   
     padding-left: 5px;
+    background-color: rgb(194, 159, 72);
+    padding-bottom: 15px;    
 }
 //cartes d'entrées
-
-.menu__description__entree h3 {       
-    @include title;        
+.menu__description__entree h3 {  //ENTREES     
+    @include title;      
+      
 }
 .menu__description__entree { //englobe les 3cartes entrée
-    // @include menu_carte; 
-    background-color: rgb(124, 139, 102);
+   
+    background-color: rgb(191, 194, 186);
     padding-bottom: 3px;
-    // position: absolute;//animation
-    // right: 600px;      //animation 
-    // animation: menu__description__entree1 0.5s forwards; //animation
-    // animation-delay: 2s;//animation
+    // position: relative; //animation
+    // overflow: hidden; //animation   
     // &--name {
-    //     background: rgb(190, 82, 82);   
+    // background: rgb(190, 82, 82);   
 }
-.menu__description__entree1 {
-      @include menu_carte; 
-
+.menu__description__entree1 {//les 3 cartes
+    @include menu_carte;      
+    // position: absolute;//animation
+    // right: 600px;      //animation    
+    // animation: menu__description__entree1 0.5s forwards;//animation  
+    // animation-delay: 2s;//animation  
 }
 
 .menu_description_prix {
@@ -109,19 +100,16 @@
     p{
       color: black;
        font-weight: bold;
-        // display: none
-        // position: absolute
-        margin-right: 2%;        
+       margin-right: 2%;        
        
     }
     .menu_description_prix_check {
         background-color: rgb(100, 231, 231);
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        // overflow: hidden;
         margin-left: 1%;
-        display: flex;
-      
+        display: flex;      
         i{
             // background-color: red;
             display: flex;
@@ -130,57 +118,53 @@
             width: 70px;
             justify-content: center;
             font-size: nth($taille-lettre,4);
-            opacity: 1;
-            overflow: hidden;
-            transform: rotate(0deg);
-            transition: transform 500ms ease-in-out
+            // opacity: 1;
+            // overflow: hidden;
+            // transform: rotate(0deg);
+            // transition: transform 500ms ease-in-out
+            // transition: transform .9s;
+             transform: rotate(360deg) translateX(10px);//la bonne place ??
         }
     }
   
-}
-// .menu__description__entree h3 {       
-//     @include title;     
-//     background-color: rgb(114, 190, 114)  
-// }
-
-// .menu__description__entree { //carte-entrée
-//     // @include menu_carte; 
-//     background-color: rgb(124, 139, 102);
-//     // position: absolute;//animation
-//     // right: 600px;      //animation 
-//     // animation: menu__description__entree1 0.5s forwards; //animation
-//     // animation-delay: 2s;//animation
-//     // &--name {
-//     //     background: rgb(190, 82, 82);  
-//}
-    
-    //Plats
+}    
+//Plats
 
 .menu__description__plats h3 {  //title plats     
-        @include title;     
-        background-color: rgb(106, 141, 106)  
+        @include title;            
     }
 .menu__description__plats {//englobe les 3 cartes plats
      background-color: rgb(110, 143, 143);
      padding-bottom: 3px;
+    //  position: relative; //animation
+    //  overflow: hidden; //animation   
 }
 .menu__description__plats1 {
-    @include menu_carte;  
-
+    @include menu_carte; 
+    // position: absolute; //animation
+    // right: 600px;      //animation    
+    // animation: menu__description__entree1 0.5s forwards;//animation  
+    // animation-delay: 2s;//animation   
 }
 
 //Desserts
-.menu__description__desserts h3 { //title dessert
-    background-color: rgb(110, 143, 143); 
+.menu__description__desserts h3 { //title dessert   
     @include title; 
 }
 .menu__description__desserts {//englobe les 3cartes dessert
     background-color: rgb(110, 143, 143);
-    padding-bottom: 3px;
+    padding-bottom: 3px; 
+    // position: relative; //animation
+    // overflow: hidden; //animation   
+
 }
 .menu__description__desserts1 {  
    @include menu_carte;
     // background-color: rgb(109, 119, 119);
+    // position: absolute; //animation
+    // right: 600px;      //animation    
+    // animation: menu__description__desserts1 0.5s forwards;//animation  
+    // animation-delay: 2s;//animation  
     
 }
 
@@ -195,11 +179,13 @@
     }
 }//animations
 
-@-webkit-keyframes menu__description__entree1 {
+@keyframes menu__description__entree1 {
     100% { right: 0; }
 }
-
-@keyframes menu__description__entree1 {
+@keyframes menu__description__plats1 {
+    100% { right: 0; }
+}
+@keyframes menu__description__desserts {
     100% { right: 0; }
 }
 
