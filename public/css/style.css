@@ -1,11 +1,3 @@
-.menu_description_prix_check {
-  background-color: #64e7e7;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 0px 20px 20px 0px;
-}
-
 .header_fleche {
   display: flex;
   flex-direction: row;
@@ -66,52 +58,58 @@
 .menu__description {
   margin-top: 60px;
   padding-left: 5px;
-  background-color: #c29f48;
   padding-bottom: 15px;
 }
 
-.menu__description__entree h3 {
+.menu__description__entree h3, .menu__description__plats h3, .menu__description__desserts h3 {
   font-size: 1rem;
   border-bottom: 3px solid aqua;
   width: 10%;
 }
 
-.menu__description__entree {
-  background-color: #bfc2ba;
+.menu__description__entree, .menu__description__plats, .menu__description__desserts {
+  background-color: pink;
   padding-bottom: 3px;
 }
+.menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check {
+  position: relative;
+  left: 0;
+}
+.menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i {
+  transition: transform 0.5s ease-out;
+  transform: rotate(360deg);
+}
 
-.menu__description__entree1 {
+.menu__description__entree > input, .menu__description__plats > input, .menu__description__desserts > input {
+  position: relative;
+}
+.menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
   background-color: #f2f2f2;
   width: 93%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 20px;
+  cursor: pointer;
   margin-bottom: 15px;
   overflow: hidden;
-  flex-wrap: nowrap;
 }
-.menu__description__entree1--name {
+.menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
   background-color: #bb7676;
-  width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 75%;
   margin-left: 2%;
 }
-.menu__description__entree1 h4 {
+.menu__description__entree .menu__description__entree1 h4, .menu__description__entree .menu__description__plats1 h4, .menu__description__entree .menu__description__desserts1 h4, .menu__description__plats .menu__description__entree1 h4, .menu__description__plats .menu__description__plats1 h4, .menu__description__plats .menu__description__desserts1 h4, .menu__description__desserts .menu__description__entree1 h4, .menu__description__desserts .menu__description__plats1 h4, .menu__description__desserts .menu__description__desserts1 h4 {
   font-size: 1.2em;
   margin-bottom: 0;
   margin-top: 5px;
 }
-.menu__description__entree1 p {
+.menu__description__entree .menu__description__entree1 p, .menu__description__entree .menu__description__plats1 p, .menu__description__entree .menu__description__desserts1 p, .menu__description__plats .menu__description__entree1 p, .menu__description__plats .menu__description__plats1 p, .menu__description__plats .menu__description__desserts1 p, .menu__description__desserts .menu__description__entree1 p, .menu__description__desserts .menu__description__plats1 p, .menu__description__desserts .menu__description__desserts1 p {
   font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   line-height: 0;
 }
-
-.menu_description_prix {
+.menu__description__entree .menu__description__entree1 .menu_description_prix, .menu__description__entree .menu__description__plats1 .menu_description_prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix, .menu__description__plats .menu__description__entree1 .menu_description_prix, .menu__description__plats .menu__description__plats1 .menu_description_prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -120,108 +118,29 @@
   position: relative;
   margin-left: 3%;
 }
-.menu_description_prix p {
+.menu__description__entree .menu__description__entree1 .menu_description_prix p, .menu__description__entree .menu__description__plats1 .menu_description_prix p, .menu__description__entree .menu__description__desserts1 .menu_description_prix p, .menu__description__plats .menu__description__entree1 .menu_description_prix p, .menu__description__plats .menu__description__plats1 .menu_description_prix p, .menu__description__plats .menu__description__desserts1 .menu_description_prix p, .menu__description__desserts .menu__description__entree1 .menu_description_prix p, .menu__description__desserts .menu__description__plats1 .menu_description_prix p, .menu__description__desserts .menu__description__desserts1 .menu_description_prix p {
   color: black;
   font-weight: bold;
   margin-right: 2%;
 }
-.menu_description_prix .menu_description_prix_check {
+.menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check {
   background-color: #64e7e7;
   width: 100%;
   height: 100%;
-  margin-left: 1%;
+  border-radius: 0px 20px 20px 0px;
   display: flex;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  left: 80%;
+  position: relative;
 }
-.menu_description_prix .menu_description_prix_check i {
+.menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i {
   display: flex;
   align-items: center;
   height: 100%;
   width: 70px;
   justify-content: center;
   font-size: 1.3em;
-  transform: rotate(360deg) translateX(10px);
-}
-
-.menu__description__plats h3 {
-  font-size: 1rem;
-  border-bottom: 3px solid aqua;
-  width: 10%;
-}
-
-.menu__description__plats {
-  background-color: #6e8f8f;
-  padding-bottom: 3px;
-}
-
-.menu__description__plats1 {
-  background-color: #f2f2f2;
-  width: 93%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 20px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  flex-wrap: nowrap;
-}
-.menu__description__plats1--name {
-  background-color: #bb7676;
-  width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-left: 2%;
-}
-.menu__description__plats1 h4 {
-  font-size: 1.2em;
-  margin-bottom: 0;
-  margin-top: 5px;
-}
-.menu__description__plats1 p {
-  font-size: 0.8em;
-  font-family: "Roboto", sans-serif;
-  line-height: 0;
-}
-
-.menu__description__desserts h3 {
-  font-size: 1rem;
-  border-bottom: 3px solid aqua;
-  width: 10%;
-}
-
-.menu__description__desserts {
-  background-color: #6e8f8f;
-  padding-bottom: 3px;
-}
-
-.menu__description__desserts1 {
-  background-color: #f2f2f2;
-  width: 93%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 20px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  flex-wrap: nowrap;
-}
-.menu__description__desserts1--name {
-  background-color: #bb7676;
-  width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-left: 2%;
-}
-.menu__description__desserts1 h4 {
-  font-size: 1.2em;
-  margin-bottom: 0;
-  margin-top: 5px;
-}
-.menu__description__desserts1 p {
-  font-size: 0.8em;
-  font-family: "Roboto", sans-serif;
-  line-height: 0;
 }
 
 #bouton_comamnder a {
@@ -245,17 +164,38 @@
   box-shadow: 5px 5px 3px #9356DC;
 }
 
+.menu__description__entree1 {
+  position: relative;
+  right: 600px;
+  animation: menu__description__entree1 0.5s forwards;
+  animation-delay: 1s;
+}
+
 @keyframes menu__description__entree1 {
   100% {
     right: 0;
   }
 }
+.menu__description__plats1 {
+  position: relative;
+  right: 600px;
+  animation: menu__description__plats1 0.5s forwards;
+  animation-delay: 2s;
+}
+
 @keyframes menu__description__plats1 {
   100% {
     right: 0;
   }
 }
-@keyframes menu__description__desserts {
+.menu__description__desserts1 {
+  position: relative;
+  right: 600px;
+  animation: menu__description__desserts1 0.5s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes menu__description__desserts1 {
   100% {
     right: 0;
   }

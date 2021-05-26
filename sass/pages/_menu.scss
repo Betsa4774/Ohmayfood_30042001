@@ -58,118 +58,63 @@
 }
 // Description de la carte du restaurant
 .menu__description {   // Entrée, plats et desserts    
-    margin-top: 60px;
-    // position: relative; //animation
-   
-    padding-left: 5px;
-    background-color: rgb(194, 159, 72);
+    margin-top: 60px;   
+    padding-left: 5px;   
     padding-bottom: 15px;    
 }
-//cartes d'entrées
-.menu__description__entree h3 {  //ENTREES     
+//Title des cartes
+.menu__description__entree h3, .menu__description__plats h3, .menu__description__desserts h3  {//Title Entrées, Plats et Desserts     
     @include title;      
-      
-}
-.menu__description__entree { //englobe les 3cartes entrée
-   
-    background-color: rgb(191, 194, 186);
-    padding-bottom: 3px;
-    // position: relative; //animation
-    // overflow: hidden; //animation   
-    // &--name {
-    // background: rgb(190, 82, 82);   
-}
-.menu__description__entree1 {//les 3 cartes
-    @include menu_carte;      
-    // position: absolute;//animation
-    // right: 600px;      //animation    
-    // animation: menu__description__entree1 0.5s forwards;//animation  
-    // animation-delay: 2s;//animation  
 }
 
-.menu_description_prix {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    // background-color: aqua;
-    color: white;
-    font-size: 1.2em;
-    position: relative;
-    margin-left: 3%;
-    // text-overflow: ellipsis;
-    p{
-      color: black;
-       font-weight: bold;
-       margin-right: 2%;        
-       
-    }
-    .menu_description_prix_check {
-        background-color: rgb(100, 231, 231);
-        width: 100%;
-        height: 100%;
-        // overflow: hidden;
-        margin-left: 1%;
-        display: flex;      
-        i{
-            // background-color: red;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            width: 70px;
-            justify-content: center;
-            font-size: nth($taille-lettre,4);
-            // opacity: 1;
-            // overflow: hidden;
-            // transform: rotate(0deg);
-            // transition: transform 500ms ease-in-out
-            // transition: transform .9s;
-             transform: rotate(360deg) translateX(10px);//la bonne place ??
+.menu__description__entree, .menu__description__plats, .menu__description__desserts {
+    background-color: pink;
+    padding-bottom: 3px;
+    > input:checked {
+        & + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check,
+        & + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check,
+        & + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check 
+            {
+            position: relative; //glissage du prix check
+            left : 0;//glissage du prix check                
+            i {
+                transition: transform 0.5s ease-out; 
+                transform:rotate(360deg); //
+                // position: relative;//??
+                // transform: rotate(-180deg);
+                //  opacity: 1; sert pas
+                //  overflow: hidden; sert pas
+               
+            }
+            
         }
     }
-  
-}    
-//Plats
-
-.menu__description__plats h3 {  //title plats     
-        @include title;            
-    }
-.menu__description__plats {//englobe les 3 cartes plats
-     background-color: rgb(110, 143, 143);
-     padding-bottom: 3px;
-    //  position: relative; //animation
-    //  overflow: hidden; //animation   
 }
-.menu__description__plats1 {
-    @include menu_carte; 
-    // position: absolute; //animation
-    // right: 600px;      //animation    
-    // animation: menu__description__entree1 0.5s forwards;//animation  
-    // animation-delay: 2s;//animation   
-}
-
-//Desserts
-.menu__description__desserts h3 { //title dessert   
-    @include title; 
-}
-.menu__description__desserts {//englobe les 3cartes dessert
-    background-color: rgb(110, 143, 143);
-    padding-bottom: 3px; 
-    // position: relative; //animation
-    // overflow: hidden; //animation   
-
-}
-.menu__description__desserts1 {  
-   @include menu_carte;
-    // background-color: rgb(109, 119, 119);
-    // position: absolute; //animation
-    // right: 600px;      //animation    
-    // animation: menu__description__desserts1 0.5s forwards;//animation  
-    // animation-delay: 2s;//animation  
+.menu__description__entree, .menu__description__plats, .menu__description__desserts {//Englobe les 9 cartes
+    >input {
+        // opacity: 0 ;
+      position: relative;      
+    }    
+  .menu__description__entree1, .menu__description__plats1, .menu__description__desserts1 {//les 9 cartes
+        @include menu_carte;       
+        .menu_description_prix { 
+            @include prix;    
+       }
+    }     
+}                
+//.menu_description_prix_check { //carré bleu ok, les propriétés 
+    //sont dans le mixin prix de la class menu description check
+//     transition-duration: 0.5s; //animation-fade in
+//     transition-timing-function:linear;//animation fade-in                 
+//     left: 80%;//    
+//     position: relative;
+    // transition: transform 4s; ne marche pas ici
+    // overflow: hidden; //pourquoi faire   
+    // opacity: 1; 
     
-}
-
-
- //bouton commander
+//}  
+  
+//bouton commander
   #bouton_comamnder {   
     a {  @include btn_a;
     text-decoration: none;
@@ -177,17 +122,41 @@
     justify-content: center;
     margin: 60px;
     }
-}//animations
+}//animations-glissage
+.menu__description__entree1 {//les 3 cartes
+    position: relative;
+    right: 600px;    
+    animation: menu__description__entree1 0.5s forwards;
+    animation-delay: 1s;
+ } 
 
 @keyframes menu__description__entree1 {
     100% { right: 0; }
 }
+.menu__description__plats1 {//les 3 cartes       
+    position: relative;
+    right: 600px;      
+    animation: menu__description__plats1 0.5s forwards;
+    animation-delay: 2s;
+}
 @keyframes menu__description__plats1 {
     100% { right: 0; }
 }
-@keyframes menu__description__desserts {
+.menu__description__desserts1 {//les 3 cartes
+    
+    position: relative;
+    right: 600px;      
+    animation: menu__description__desserts1 0.5s forwards; 
+    animation-delay: 3s;
+}
+@keyframes menu__description__desserts1 {
     100% { right: 0; }
 }
 
+//animation icone
+//  @keyframes fa-check-circle { 
+//      100% {
+//     transform:rotate(360deg);
+//      }}
 
 
