@@ -3,14 +3,7 @@
 @import "./layout/accueil.scss";
 @import "./pages/menu.scss";
 
-
-
-// $anim-dur:1000ms;
-
-
-//     margin: 0;
-//     padding: 0;
-// }
+//Mobile
 @media all and (max-width: 500px) {
     .bloc_page {
         width: 98%;
@@ -21,9 +14,8 @@
      .loader {         
         width: 90vw;
         height: 100vh;
-        position: absolute;       
-    
-    }
+        position: absolute;     
+   }
     .loader__animation {        
       border-top: 10px solid #ff79da;
       border-bottom: 10px solid #99e2d0;
@@ -39,9 +31,8 @@
       margin: auto;
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;     
-      background-color: rgb(163, 207, 146);     
-    }  
-    
+      background-color: rgb(163, 207, 146);   
+    }      
     @keyframes spin {
         0% {
             transform: rotate(0deg);
@@ -52,10 +43,8 @@
             transform: rotate(360deg);
             opacity: 0;
             height: 0;            
-        }
-        
-    }
-   
+        }        
+    }   
     .transition-delay-1 {
         animation: animation-delay 0.4s 1.5s linear both;
       }
@@ -79,31 +68,17 @@
           opacity: 1;
           transform: scale(1);
         }
-      }
-    // Début du site
-    // .main {
-    //     width: 67%;
-    
+      }  
+   // Header de la page     
     header { 
-         width: 100%;         
-        // width: 67%;//main
-
+        width: 100%;                
         >div { //Carte et logo 
             background-color: #ece9e9;
             border: 1px solid #d6d5d5;
-             padding-top: 25px;
-            // padding-bottom: 25px;
+            padding-top: 25px;           
             display: flex;
-            justify-content: center;  
-            // width: 100%;  
-            // menu1.html              
-            // margin-left: 25px;           
-            
-        }     
-        //  >span {# ubication
-          
-        //  } 
-    
+            justify-content: center;                   
+        }              
      #ubication {   
          display: flex;
          justify-content: center;             
@@ -111,18 +86,16 @@
                 display: flex;
                 flex-direction: row;  
                 justify-content: center;
-                margin: nth($margin-dimensions,2);   
-           
+                margin: nth($margin-dimensions,2);             
              input {
                 border: none;
                 font-weight: bolder;
                 font-size: nth($taille-lettre,2);
                 }
             }
-        }
-        
+        }        
     }
-
+    //Information sur le site
     #information{
         // width: 67%;//main
         display: flex;
@@ -134,16 +107,13 @@
             text-align: center;
             font-size: nth($taille-lettre,4);
             font-family: $font-text;  
-            margin-bottom: 0;
-        
-         +p { //Découvrez des restaurants...
-               
+            margin-bottom: 0;        
+         +p { //Découvrez des restaurants...               
                 display: flex;  
                 justify-content: center;  
                 text-align: center;  
                 font-size: nth($taille-lettre,3);
-                font-family: $font-text;                     
-        
+                font-family: $font-text;           
              +a { //bouton: Explorez nos restaurants
                   @include btn_a;
                                        
@@ -151,31 +121,26 @@
                 
             }
         }    
-    }
-   
-    #list { //fonctionnement
+    }   
+    #list { //Fonctionnement
         display: flex;
         flex-direction: column;
         justify-content: center;
         // width: 67%;//main
         h2 { //titre
-            margin: nth($margin-dimensions,2);              
-
+            margin: nth($margin-dimensions,2); 
             +ul {
                 list-style-type: none;
-                padding-left: nth($padding-dimensions,2);
-                       
+                padding-left: nth($padding-dimensions,2);                       
                 li {
                     display: flex;
                     flex-direction: row;  
-                    margin-bottom: nth($margin-dimensions,3);                    
-
+                    margin-bottom: nth($margin-dimensions,3);        
                     >div { //carte de la liste du fonctionnement
                         background-color: #eeeeee;
                         box-shadow: 5px 5px 3px #dddada;  
                         border-radius: 15px;
-                        width: 90%;
-                        // width: 67%;//main
+                        width: 90%;                       
                         margin-left: 5px;
                         box-sizing: content-box;                       
                         padding-top: 15px;
@@ -184,8 +149,7 @@
                         height: 50px;
                         -webkit-transition: color 0.5s;
                         transition: color 0.5s;                   
-                    }
-                                                           
+                    }                                                           
                       i {//icones                       
                             margin: 5px 15px; 
                             padding: 0px 15px;
@@ -195,12 +159,7 @@
                             transition: color 0.5s;                          }     
                         i:hover {
                             color: $color-primary;
-                        }
-
-                    // span {text                                          
-                        
-                    // }      
-
+                        }                
                         p {//nombres de la liste
                             background-color: $color-primary;
                             border-radius: 50%;
@@ -217,19 +176,15 @@
                
                 } 
              
-             }
+            }
             
         }
     }
-   
-    
-   //Restaurants//
-
+    //Les 4 restaurants
   #restaurants {
-    //   width: 67%;//main
-       padding-left: 15px;
+     padding-left: 15px;
    }
-    .restaurants_list {
+   .restaurants_list {
        text-decoration: none;
     }
     .carte_restaurants {
@@ -252,118 +207,705 @@
             bottom: 0;
             left: 0;
             right: 0;
-          }
+        }
         & img {
             width: 100%;
             object-fit: cover;
             height: 35vh;         
             border-radius: 8px 8px 0 0;
             overflow: hidden;
-        }
-         &_legende {
-             width: 100%;
-             display: flex;
-             flex-direction: row;              
-            //  align-items: flex-end;
+       }
+        &_legende {
+            width: 100%;
+            display: flex;
+            flex-direction: row;         
             align-items: center;
-             position: relative;
-             // justify-content: flex-end;
-             //     padding-right: 5%;
-             padding-bottom: 5%;
-            //   padding-left: 5%;
+            position: relative;
+            padding-bottom: 5%;
             &_title {
-                position: relative;   
-                display: flex;
-                flex-direction: column;
-                width: 57%;
-                // width: 60%;//main
-             & h4 { 
-                font-size: nth($taille-lettre,4);
-                 margin-top: 7px; 
-                                    
-                 }
-             & p {//text
-                  font-size: nth($taille-lettre,3);
-                  font-family: $font-text;                   
-                  margin-top: 20px;                   
-                  position: absolute;
-                  //  top: 50%;
-                  top: 25px;
+               position: relative;   
+               display: flex;
+               flex-direction: column;
+               width: 57%;
+               & h4 { 
+                  font-size: nth($taille-lettre,4);
+                  margin-top: 7px; 
+                }
+                & p {//text
+                   font-size: nth($taille-lettre,3);
+                   font-family: $font-text;                   
+                   margin-top: 20px;                   
+                   position: absolute;
+                    top: 25px;
                 }               
                             
             } 
         }
     }
-     
-    
+   //Carte Nouveau
     .carte_restaurants span {
-        background-color: aqua;
-        position: absolute;
-        // width: 15%;
+        background-color: #00ffff;
+        position: absolute;     
         right: 30px;
         top: 25px;
-        color: green;
+        color: #008000;
         margin-top: 20px;
         height: 30px;
         display: flex;
         align-items: center;
         font-weight: bold;
         font-size: nth($font-text,1);
-        padding: 0px 10px;
-       
+        padding: 0px 10px;       
     }
     .btn_like_heart {
         @include btn_like;
    }
- 
-  .footer {
-    //   width: 67%;//main
-        background-color:#212020;
-        height: 130px;
-        
+   //Last section
+  .footer {    
+        // background-color:#212020;
+        // height: 130px;        
       h2 { //titre
-            color:$color-text;
-            font-family: $font-titres;
-            font-size: nth($taille-lettre,3);
-            padding: nth($padding-dimensions,2);
-            margin-bottom: 0;                  
+            // color:$color-text;
+            // font-family: $font-titres;
+            // font-size: nth($taille-lettre,3);
+            // padding: nth($padding-dimensions,2);
+            // margin-bottom: 0;                  
            +div { //.info__footer
                 padding-left: nth($padding-dimensions,1);
-             ul {
+              ul {
                   list-style-type: none;
                   padding-left: nth($padding-dimensions,2);
-                  margin: 0;
-                  
+                  margin: 0;                  
                     li {               
-                        a { //lien
-                            color: $color-text;
-                            text-decoration: none;
-                            font-family: $font-text;
-                            padding-top: nth($padding-dimensions,3);
-                            font-size: nth($taille-lettre,2); 
-                            
-                            i { //icones
-                                margin-right: 15px;
-                                width: 10px;
+                    a { //lien
+                        color: $color-text;
+                        text-decoration: none;
+                        font-family: $font-text;
+                        padding-top: nth($padding-dimensions,3);
+                        font-size: nth($taille-lettre,2);                             
+                        i { //icones
+                           margin-right: 15px;
+                           width: 10px;
                            
                             
                         }
                         
                     }
                 }
-            }           
+           }           
+        }    
+    }  
+} 
+//Tablette
+@media (min-width: 501px) and (max-width: 769px) {
+    .bloc_page {
+        width: 98%;
+        background-color: #f2f2f2;
+        position: relative;        
+    }   
+    // mise en forme du loader
+     .loader {         
+        width: 90vw;
+        height: 100vh;
+        position: absolute;     
+   }
+    .loader__animation {        
+      border-top: 10px solid #ff79da;
+      border-bottom: 10px solid #99e2d0;
+      border-left: 10px solid #9356DC;
+      border-right: 10px solid #faeb9f;
+      border-radius: 50%;
+      width: 10vh;
+      height: 10vw;
+      -webkit-animation: spin 1.5s ease 1s both;
+      -o-animation: spin 1.5s ease 1s both;
+      animation: spin 1.5s ease 1s both;     
+     // Positionnement du loader_animation
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;     
+      background-color: rgb(163, 207, 146);   
+    }      
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+            opacity: 1;
+            
+        }
+        100% {
+            transform: rotate(360deg);
+            opacity: 0;
+            height: 0;            
+        }        
+    }   
+    .transition-delay-1 {
+        animation: animation-delay 0.4s 1.5s linear both;
+      }
+      .transition-delay-2 {
+        opacity: 0;
+        animation: animation-delay 0.4s linear 1.7s both;
+      }
+      .transition-delay-3 {
+        opacity: 0;
+        animation: animation-delay 0.4s linear 2s both;
+      }
+      
+      @keyframes animation-delay {
+        from {
+          opacity: 0;
+        }
+        90% {
+          transform: scale(1.08);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }  
+   // Header de la page     
+    header { 
+        width: 100%;                
+        >div { //Carte et logo 
+            background-color: #ece9e9;
+            border: 1px solid #d6d5d5;
+             padding-top: 25px;           
+            display: flex;
+            justify-content: center;             
+        }              
+     #ubication {   
+         display: flex;
+         justify-content: center;             
+         form {
+                display: flex;
+                flex-direction: row;  
+                justify-content: center;
+                margin: nth($margin-dimensions,2);   
            
+             input {
+                border: none;
+                font-weight: bolder;
+                font-size: nth($taille-lettre,2);
+                }
+            }
+        }        
+    }
+    //Information sur le site
+    #information{
+        // width: 67%;//main
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      h1 { //Reservez le menu...
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: nth($taille-lettre,4);
+            font-family: $font-text;  
+            margin-bottom: 0;        
+         +p { //Découvrez des restaurants...               
+                display: flex;  
+                justify-content: center;  
+                text-align: center;  
+                font-size: nth($taille-lettre,3);
+                font-family: $font-text;           
+             +a { //bouton: Explorez nos restaurants
+                  @include btn_a;                                       
+                }           
+                
+            }
+        }    
+    }   
+    #list { //Fonctionnement
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // width: 67%;//main
+        h2 { //titre
+            margin: nth($margin-dimensions,2); 
+            +ul {
+                list-style-type: none;
+                padding-left: nth($padding-dimensions,3);                       
+                li {
+                    display: flex;
+                    flex-direction: row;  
+                    margin-bottom: nth($margin-dimensions,3);        
+                    >div { //carte de la liste du fonctionnement
+                        background-color: #eeeeee;
+                        box-shadow: 5px 5px 3px #dddada;  
+                        border-radius: 15px;
+                        width: 85%;                       
+                        margin-left: 5px;
+                        box-sizing: content-box;                       
+                        padding-top: 15px;
+                        padding-left: 10px;
+                        margin-left: 10px; 
+                        height: 50px;
+                        -webkit-transition: color 0.5s;
+                        transition: color 0.5s;                   
+                    }                                                           
+                      i {//icones                       
+                            margin: 5px 15px; 
+                            padding: 0px 15px;
+                            width: 5%;  
+                            color: #878788; 
+                            -webkit-transition: color 0.5s;
+                            transition: color 0.5s;                          }     
+                        i:hover {
+                            color: $color-primary;
+                        }                
+                        p {//nombres de la liste
+                            background-color: $color-primary;
+                            border-radius: 50%;
+                            width: 4%;
+                            text-align: center;
+                            color: $color-text;
+                            // margin: nth($margin-dimensions,1);  
+                            margin-top: 20px;
+                            margin-left: 10px;
+                            padding: nth($padding-dimensions,1);   
+                            position: absolute;                                          
+                        }
+                    }
+               
+                } 
+             
+            }
+            
+        }
+    }
+ //Les 4 restaurants
+  #restaurants {
+     padding-left: 15px;
+   }
+   .restaurants_list {
+       text-decoration: none;
+    }
+    .carte_restaurants {
+        // background-color: $color-card;
+        // object-fit: contain;
+         width: 90%;                
+        // margin-left: auto;
+        // margin-right: auto;
+        // margin-bottom: auto;
+        // height: 70%;     
+        // position: relative; 
+        // display: flex;
+        // flex-direction: column;  
+        // > a {
+        //     text-decoration: none;
+        //     color: transparent;
+        //     z-index: 1;
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //}
+        & img {
+            // width: 100%;
+            // object-fit: cover;
+            // height: 35vh;         
+            border-radius: 12px;
+            //overflow: hidden;
        }
-    
-   
+        // &_legende {
+        //     width: 100%;
+        //     display: flex;
+        //     flex-direction: row;         
+        //     align-items: center;
+        //     position: relative;
+        //     padding-bottom: 5%;
+            // &_title {
+            //    position: relative;   
+            //    display: flex;
+            //    flex-direction: column;
+            //    width: 57%;
+            //    & h4 { 
+            //       font-size: nth($taille-lettre,4);
+            //       margin-top: 7px; 
+               // }
+                // & p {//text
+                //    font-size: nth($taille-lettre,3);
+                //    font-family: $font-text;                   
+                //    margin-top: 20px;                   
+                //    position: absolute;
+                //     top: 25px;
+                // }               
+                            
+          //  } 
+      //  }
+    }
+   //Carte Nouveau
+    .carte_restaurants span {
+        background-color: #00ffff;
+        position: absolute;     
+        right: 30px;
+        top: 25px;
+        color: #008000;
+        margin-top: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: nth($font-text,1);
+        padding: 0px 10px;       
+    }
+    .btn_like_heart {
+        @include btn_like;
+   }
+   //Last section
+  .footer {    
+        background-color:#212020;
+        height: 130px;        
+      h2 { //titre
+             color:$color-text;
+             font-family: $font-titres;
+             font-size: nth($taille-lettre,4);
+             padding: nth($padding-dimensions,2);
+             margin-bottom: 0;
+             display: flex;
+             flex-direction: row;
+             justify-content: center;                  
+           +div { //.info__footer
+                // padding-left: nth($padding-dimensions,1);
+              ul {
+                //   list-style-type: none;
+                //   padding-left: nth($padding-dimensions,2);
+                //   margin: 0; 
+                margin-right: 10px; 
+                margin-top: 10px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;                
+                   // li {               
+                   // a { //lien
+                        // color: $color-text;
+                        // text-decoration: none;
+                        // font-family: $font-text;
+                        // padding-top: nth($padding-dimensions,3);
+                        // font-size: nth($taille-lettre,2);                             
+                      //  i { //icones
+                        //    margin-right: 15px;
+                        //    width: 10px;
+                           
+                            
+                       // }
+                        
+                   // }
+               // }
+           }           
+        }    
+    }  
+} 
+//desktop
+@media (min-width:770px){
+//      .bloc_page {
+//          width: 98%;
+//         background-color: #f2f2f2;
+//         position: relative;        
+//    }   
+// mise en forme du loader
+.loader {         
+   width: 90vw;
+    height: 100vh;
+    position: absolute;     
+}
+.loader__animation {        
+    border-top: 10px solid #ff79da;
+    border-bottom: 10px solid #99e2d0;
+    border-left: 10px solid #9356DC;
+    border-right: 10px solid #faeb9f;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vw;
+    -webkit-animation: spin 1.5s ease 1s both;
+    -o-animation: spin 1.5s ease 1s both;
+    animation: spin 1.5s ease 1s both;     
+    // Positionnement du loader_animation
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;     
+    background-color: rgb(163, 207, 146);   
+    }      
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;            
+        }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        height: 0;            
     }        
-// } //main
+}   
+.transition-delay-1 {
+    animation: animation-delay 0.4s 1.5s linear both;
+}
+.transition-delay-2 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 1.7s both;
+}
+.transition-delay-3 {
+   opacity: 0;
+   animation: animation-delay 0.4s linear 2s both;
+}
+@keyframes animation-delay {
+   from {
+       opacity: 0;
+   }
+    90% {
+       transform: scale(1.08);
+    }
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}  
+// Header de la page     
+header { 
+    width: 100%;                
+    >div { //Carte et logo 
+        background-color: #ece9e9;
+        border: 1px solid #d6d5d5;
+        padding-top: 25px;           
+        display: flex;
+        justify-content: center;             
+    }              
+    #ubication {   
+        display: flex;
+        justify-content: center;             
+      form {
+            display: flex;
+            flex-direction: row;  
+            justify-content: center;
+            margin: nth($margin-dimensions,2);   
+          input {
+             border: none;
+             font-weight: bolder;
+             font-size: nth($taille-lettre,2);
+            }
+        }
+    }        
+}
+//     //Information sur le site
+     #information{
+        // width: 67%;//main
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      h1 { //Reservez le menu...
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: nth($taille-lettre,4);
+            font-family: $font-text;  
+            margin-bottom: 0;        
+         +p { //Découvrez des restaurants...               
+                display: flex;  
+                justify-content: center;  
+                text-align: center;  
+                font-size: nth($taille-lettre,3);
+                font-family: $font-text;           
+             +a { //bouton: Explorez nos restaurants
+                  @include btn_a;
+                                       
+                }           
+                
+            }
+        }    
+}   
+#list { //Fonctionnement
+    //    display: flex;
+    //    flex-direction: column;
+    //    justify-content: center;
+    // width: 67%;//main
+   cursor: pointer;
+   margin-left: 55px;
+    h2 { //titre
+        margin: 45px 0 0 45px ; 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        +ul {
+           // list-style-type: none;
+           // padding-left: nth($padding-dimensions,2);                       
+            li {
+                display: flex;
+                flex-direction: row;  
+                margin-bottom: nth($margin-dimensions,3);        
+                >div { //carte de la liste du fonctionnement
+                  background-color: #eeeeee;
+                    box-shadow: 5px 5px 3px #dddada;  
+                    border-radius: 15px;
+                    width: 80%;                       
+                    margin-left: 5px;
+                    box-sizing: content-box;                       
+                    padding-top: 15px;
+                    padding-left: 10px;
+                    margin-left: 75px; 
+                    height: 50px;
+                    // -webkit-transition: color 0.5s;
+                    transition: color 0.5s;                   
+               }                                                           
+                i {//icones                       
+                    margin: 5px 60px; 
+                    padding: 0px 15px;
+                    width: 5%;  
+                    color: #878788; 
+                    //    -webkit-transition: color 0.5s;
+                    transition: color 0.5s; 
+                }     
+                i:hover {
+                    color: $color-primary;
+                }                
+                p {//nombres de la liste
+                    background-color: $color-primary;
+                    border-radius: 50%;
+                    width: 2%;
+                    text-align: center;
+                    color: $color-text;
+                    margin-top: 20px;
+                    margin-left: 50px;
+                    padding: nth($padding-dimensions,1);   
+                    position: absolute;                                          
+                }               
+            } 
+             
+        }
+            
+    }
+}
+//Les 4 restaurants
+#restaurants {
+    //  padding-left: 15px;
+    //  display: flex;
+    //  flex-direction: row;
+   h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 45px;
+   }
+   }
+ //    .restaurants_list {
+ //        text-decoration: none;
+ //     }
+    .carte_restaurants {
+        // background-color: $color-card;
+        // object-fit: contain;
+        width: 70%;        
+        // // margin-left: auto;
+        // // margin-right: auto;
+        margin-bottom: 20px;
+        height: 30%;     
+        // position: relative; 
+        display: flex;
+        flex-direction: row;  
+        > a {
+            // text-decoration: none;
+            // color: transparent;
+            // z-index: 1;
+            // position: absolute;
+            // top: 0;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+        }
+        & img {
+            width: 70%;
+            // object-fit: cover;
+            height: 25vh;         
+            border-radius: 50px;
+            // overflow: hidden;
+       }
+        &_legende {
+            // width: 100%;
+            // display: flex;
+            // flex-direction: row;         
+            // align-items: center;
+            // position: relative;
+            // padding-bottom: 5%;
+            margin-left: 25px;
+            // &_title {
+            //    position: relative;   
+            //    display: flex;
+            //    flex-direction: column;
+            //    width: 57%;
+            //    & h4 { 
+            //       font-size: nth($taille-lettre,4);
+                   margin-top: 15px; 
+            //     }
+         //       & p {//text
+                //    font-size: nth($taille-lettre,3);
+                //    font-family: $font-text;                   
+                //    margin-top: 20px;                   
+                //    position: absolute;
+                //     top: 25px;
+              //  }               
+                            
+           // } 
+        }
+    }
+    
+   //Carte Nouveau
+    .carte_restaurants span {
+        // background-color: #00ffff;
+        // position: absolute;     
+        right: 20%;
+        top: 12%;
+        // color: #008000;
+        // margin-top: 20px;
+        // height: 30px;
+        // display: flex;
+        // align-items: center;
+        // font-weight: bold;
+        // font-size: nth($font-text,1);
+        // padding: 0px 10px;       
+    }
+    .btn_like_heart {
+        @include btn_like;       
+   }
+   //Last section
+footer {    
+    //         background-color:#212020;
+    //         height: 130px;        
+    >.title__footer { //titre
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+
+            
+     //             color:$color-text;
+     //             font-family: $font-titres;            //ne marche pas ?
+     //             padding: nth($padding-dimensions,2);
+     //             margin-bottom: 0;  
+
+        +div { //.info__footer
+        //                 padding-left: nth($padding-dimensions,1);
+          margin-top: 15px;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 93%;
+              //  list-style-type: none;
+              // padding-left: nth($padding-dimensions,2);
+                margin: 15px;                  
+                 li {               
+                        //      a { //lien
+                        //       color: $color-text;
+                        //       text-decoration: none;
+                        //       font-family: $font-text;
+                        //       padding-top: nth($padding-dimensions,3);
+                        //       font-size: nth($taille-lettre,2);                             
+                        //       i { //icones
+                        //           margin-right: 15px;
+                        //           width: 10px;              
+                        //       }
+                    }
+                     }
+               }           
+            }    
+     }  
 } 
    
     
-
-
-
-
-
-   

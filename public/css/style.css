@@ -1,203 +1,648 @@
-.header_fleche {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  align-items: center;
-  padding: 0;
-}
-.header_fleche a {
-  text-decoration: none;
-  color: black;
-  font-family: "Shrikhand", cursive;
-  font-size: 1em;
-  padding: 18px;
-}
-.header_fleche i {
-  position: absolute;
-  left: 30px;
-  font-size: 1.3em;
-}
+@media all and (max-width: 500px) {
+  .header_fleche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    padding: 0;
+  }
+  .header_fleche a {
+    text-decoration: none;
+    color: black;
+    font-family: "Shrikhand", cursive;
+    font-size: 1em;
+    padding: 18px;
+  }
+  .header_fleche i {
+    position: absolute;
+    left: 30px;
+    font-size: 1.3em;
+  }
 
-.carte_restaurant {
-  background-color: #FFFF;
-  object-fit: contain;
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.carte_restaurant img {
-  width: 100%;
-  object-fit: cover;
-  height: 40vh;
-}
-.carte_restaurant_name {
-  background-color: #FFFF;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  height: 45px;
-  top: 90%;
-  border-radius: 25px 25px 0px 0px;
-}
-.carte_restaurant_name h4 {
-  font-size: 1.4rem;
-  font-family: "Shrikhand", cursive;
-  padding-right: 5px;
-  padding-top: 10px;
-}
+  .carte_restaurant {
+    background-color: #FFFF;
+    object-fit: contain;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .carte_restaurant img {
+    width: 100%;
+    object-fit: cover;
+    height: 40vh;
+  }
+  .carte_restaurant_name {
+    background-color: #FFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    height: 45px;
+    top: 90%;
+    border-radius: 25px 25px 0px 0px;
+  }
+  .carte_restaurant_name h4 {
+    font-size: 1.4rem;
+    font-family: "Shrikhand", cursive;
+    padding-right: 5px;
+    padding-top: 10px;
+  }
 
-.btn_like_heart {
-  background-color: aqua;
-}
+  .menu__description {
+    margin-top: 60px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+  }
 
-.menu__description {
-  margin-top: 60px;
-  padding-left: 5px;
-  padding-bottom: 15px;
-}
+  .menu__description__entree h3, .menu__description__plats h3,
+.menu__description__desserts h3 {
+    font-size: 1rem;
+    border-bottom: 3px solid aqua;
+    width: 10%;
+  }
 
-.menu__description__entree h3, .menu__description__plats h3, .menu__description__desserts h3 {
-  font-size: 1rem;
-  border-bottom: 3px solid aqua;
-  width: 10%;
-}
+  .menu__description__entree, .menu__description__plats, .menu__description__desserts {
+    padding-bottom: 3px;
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check {
+    position: relative;
+    left: 0;
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i {
+    transition: transform 0.5s ease-out;
+    transform: rotate(360deg);
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix {
+    position: relative;
+    left: 0;
+  }
 
-.menu__description__entree, .menu__description__plats, .menu__description__desserts {
-  background-color: pink;
-  padding-bottom: 3px;
-}
-.menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check {
-  position: relative;
-  left: 0;
-}
-.menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i {
-  transition: transform 0.5s ease-out;
-  transform: rotate(360deg);
-}
+  .menu__description__entree > input, .menu__description__plats > input, .menu__description__desserts > input {
+    opacity: 0;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 3px #dddada;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
+    width: 65%;
+    margin-left: 2%;
+  }
+  .menu__description__entree .menu__description__entree1 h4, .menu__description__entree .menu__description__plats1 h4, .menu__description__entree .menu__description__desserts1 h4, .menu__description__plats .menu__description__entree1 h4, .menu__description__plats .menu__description__plats1 h4, .menu__description__plats .menu__description__desserts1 h4, .menu__description__desserts .menu__description__entree1 h4, .menu__description__desserts .menu__description__plats1 h4, .menu__description__desserts .menu__description__desserts1 h4 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .menu__description__entree .menu__description__entree1 .comment, .menu__description__entree .menu__description__plats1 .comment, .menu__description__entree .menu__description__desserts1 .comment, .menu__description__plats .menu__description__entree1 .comment, .menu__description__plats .menu__description__plats1 .comment, .menu__description__plats .menu__description__desserts1 .comment, .menu__description__desserts .menu__description__entree1 .comment, .menu__description__desserts .menu__description__plats1 .comment, .menu__description__desserts .menu__description__desserts1 .comment {
+    font-size: 0.8em;
+    font-family: "Roboto", sans-serif;
+    line-height: 0;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix, .menu__description__entree .menu__description__plats1 .menu_description_prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix, .menu__description__plats .menu__description__entree1 .menu_description_prix, .menu__description__plats .menu__description__plats1 .menu_description_prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    margin-left: 3%;
+    position: relative;
+    left: 0;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .prix, .menu__description__entree .menu__description__plats1 .menu_description_prix .prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix .prix, .menu__description__plats .menu__description__entree1 .menu_description_prix .prix, .menu__description__plats .menu__description__plats1 .menu_description_prix .prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix .prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix .prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix .prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .prix {
+    color: #333232;
+    font-weight: bold;
+    margin-right: 2%;
+    flex-grow: 2;
+    margin-bottom: 5%;
+    left: 30%;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check {
+    background-color: #64e7e7;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    left: 80%;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 70px;
+    justify-content: center;
+    font-size: 1.3em;
+  }
 
-.menu__description__entree > input, .menu__description__plats > input, .menu__description__desserts > input {
-  position: relative;
-}
-.menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
-  background-color: #f2f2f2;
-  width: 93%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-.menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
-  background-color: #bb7676;
-  width: 75%;
-  margin-left: 2%;
-}
-.menu__description__entree .menu__description__entree1 h4, .menu__description__entree .menu__description__plats1 h4, .menu__description__entree .menu__description__desserts1 h4, .menu__description__plats .menu__description__entree1 h4, .menu__description__plats .menu__description__plats1 h4, .menu__description__plats .menu__description__desserts1 h4, .menu__description__desserts .menu__description__entree1 h4, .menu__description__desserts .menu__description__plats1 h4, .menu__description__desserts .menu__description__desserts1 h4 {
-  font-size: 1.2em;
-  margin-bottom: 0;
-  margin-top: 5px;
-}
-.menu__description__entree .menu__description__entree1 p, .menu__description__entree .menu__description__plats1 p, .menu__description__entree .menu__description__desserts1 p, .menu__description__plats .menu__description__entree1 p, .menu__description__plats .menu__description__plats1 p, .menu__description__plats .menu__description__desserts1 p, .menu__description__desserts .menu__description__entree1 p, .menu__description__desserts .menu__description__plats1 p, .menu__description__desserts .menu__description__desserts1 p {
-  font-size: 0.8em;
-  font-family: "Roboto", sans-serif;
-  line-height: 0;
-}
-.menu__description__entree .menu__description__entree1 .menu_description_prix, .menu__description__entree .menu__description__plats1 .menu_description_prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix, .menu__description__plats .menu__description__entree1 .menu_description_prix, .menu__description__plats .menu__description__plats1 .menu_description_prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  color: white;
-  font-size: 1.2em;
-  position: relative;
-  margin-left: 3%;
-}
-.menu__description__entree .menu__description__entree1 .menu_description_prix p, .menu__description__entree .menu__description__plats1 .menu_description_prix p, .menu__description__entree .menu__description__desserts1 .menu_description_prix p, .menu__description__plats .menu__description__entree1 .menu_description_prix p, .menu__description__plats .menu__description__plats1 .menu_description_prix p, .menu__description__plats .menu__description__desserts1 .menu_description_prix p, .menu__description__desserts .menu__description__entree1 .menu_description_prix p, .menu__description__desserts .menu__description__plats1 .menu_description_prix p, .menu__description__desserts .menu__description__desserts1 .menu_description_prix p {
-  color: black;
-  font-weight: bold;
-  margin-right: 2%;
-}
-.menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check {
-  background-color: #64e7e7;
-  width: 100%;
-  height: 100%;
-  border-radius: 0px 20px 20px 0px;
-  display: flex;
-  transition-duration: 0.5s;
-  transition-timing-function: linear;
-  left: 80%;
-  position: relative;
-}
-.menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 70px;
-  justify-content: center;
-  font-size: 1.3em;
-}
+  #bouton_comamnder a {
+    background: linear-gradient(#ff79dA, #9356DC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    border-radius: 30px;
+    width: 55%;
+    padding: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+  }
+  #bouton_comamnder a:hover {
+    background: #ff7cdb;
+    border-radius: 25px;
+    box-shadow: 5px 5px 3px #9356DC;
+  }
 
-#bouton_comamnder a {
-  background: linear-gradient(#ff79dA, #9356DC);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #f2f2f2;
-  border-radius: 30px;
-  width: 45%;
-  padding: 18px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  margin: 60px;
-}
-#bouton_comamnder a:hover {
-  background: #ff7cdb;
-  border-radius: 25px;
-  box-shadow: 5px 5px 3px #9356DC;
-}
+  .menu__description__entree1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__entree1 0.5s forwards;
+    animation-delay: 1s;
+  }
 
-.menu__description__entree1 {
-  position: relative;
-  right: 600px;
-  animation: menu__description__entree1 0.5s forwards;
-  animation-delay: 1s;
-}
+  @keyframes menu__description__entree1 {
+    100% {
+      right: 0;
+    }
+  }
+  .menu__description__plats1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__plats1 0.5s forwards;
+    animation-delay: 2s;
+  }
 
-@keyframes menu__description__entree1 {
-  100% {
-    right: 0;
+  @keyframes menu__description__plats1 {
+    100% {
+      right: 0;
+    }
+  }
+  .menu__description__desserts1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__desserts1 0.5s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes menu__description__desserts1 {
+    100% {
+      right: 0;
+    }
   }
 }
-.menu__description__plats1 {
-  position: relative;
-  right: 600px;
-  animation: menu__description__plats1 0.5s forwards;
-  animation-delay: 2s;
-}
+@media (min-width: 501px) and (max-width: 769px) {
+  .header_fleche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    padding: 0;
+  }
+  .header_fleche a {
+    text-decoration: none;
+    color: black;
+    font-family: "Shrikhand", cursive;
+    font-size: 1em;
+    padding: 18px;
+  }
+  .header_fleche i {
+    position: absolute;
+    left: 30px;
+    font-size: 1.3em;
+  }
 
-@keyframes menu__description__plats1 {
-  100% {
-    right: 0;
+  .carte_restaurant {
+    background-color: #FFFF;
+    object-fit: contain;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .carte_restaurant img {
+    width: 100%;
+    object-fit: cover;
+    height: 40vh;
+  }
+  .carte_restaurant_name {
+    background-color: #FFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    height: 45px;
+    top: 90%;
+    border-radius: 25px 25px 0px 0px;
+  }
+  .carte_restaurant_name h4 {
+    font-size: 1.4rem;
+    font-family: "Shrikhand", cursive;
+    padding-right: 5px;
+    padding-top: 10px;
+  }
+
+  .btn_like_heart {
+    background-color: aqua;
+  }
+
+  .menu__description {
+    margin-top: 60px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+  }
+
+  .menu__description__entree h3, .menu__description__plats h3,
+.menu__description__desserts h3 {
+    font-size: 1rem;
+    border-bottom: 3px solid aqua;
+    width: 10%;
+  }
+
+  .menu__description__entree, .menu__description__plats, .menu__description__desserts {
+    background-color: pink;
+    padding-bottom: 3px;
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check {
+    position: relative;
+    left: 0;
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i {
+    transition: transform 0.5s ease-out;
+    transform: rotate(360deg);
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix {
+    position: relative;
+    left: 0;
+  }
+
+  .menu__description__entree > input, .menu__description__plats > input, .menu__description__desserts > input {
+    opacity: 0;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 3px #dddada;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
+    width: 65%;
+    margin-left: 2%;
+  }
+  .menu__description__entree .menu__description__entree1 h4, .menu__description__entree .menu__description__plats1 h4, .menu__description__entree .menu__description__desserts1 h4, .menu__description__plats .menu__description__entree1 h4, .menu__description__plats .menu__description__plats1 h4, .menu__description__plats .menu__description__desserts1 h4, .menu__description__desserts .menu__description__entree1 h4, .menu__description__desserts .menu__description__plats1 h4, .menu__description__desserts .menu__description__desserts1 h4 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .menu__description__entree .menu__description__entree1 .comment, .menu__description__entree .menu__description__plats1 .comment, .menu__description__entree .menu__description__desserts1 .comment, .menu__description__plats .menu__description__entree1 .comment, .menu__description__plats .menu__description__plats1 .comment, .menu__description__plats .menu__description__desserts1 .comment, .menu__description__desserts .menu__description__entree1 .comment, .menu__description__desserts .menu__description__plats1 .comment, .menu__description__desserts .menu__description__desserts1 .comment {
+    font-size: 0.8em;
+    font-family: "Roboto", sans-serif;
+    line-height: 0;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix, .menu__description__entree .menu__description__plats1 .menu_description_prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix, .menu__description__plats .menu__description__entree1 .menu_description_prix, .menu__description__plats .menu__description__plats1 .menu_description_prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    margin-left: 3%;
+    position: relative;
+    left: 0;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .prix, .menu__description__entree .menu__description__plats1 .menu_description_prix .prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix .prix, .menu__description__plats .menu__description__entree1 .menu_description_prix .prix, .menu__description__plats .menu__description__plats1 .menu_description_prix .prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix .prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix .prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix .prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .prix {
+    color: #333232;
+    font-weight: bold;
+    margin-right: 2%;
+    flex-grow: 2;
+    margin-bottom: 5%;
+    left: 30%;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check {
+    background-color: #64e7e7;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    left: 80%;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 70px;
+    justify-content: center;
+    font-size: 1.3em;
+  }
+
+  #bouton_comamnder a {
+    background: linear-gradient(#ff79dA, #9356DC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    border-radius: 30px;
+    width: 55%;
+    padding: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+  }
+  #bouton_comamnder a:hover {
+    background: #ff7cdb;
+    border-radius: 25px;
+    box-shadow: 5px 5px 3px #9356DC;
+  }
+
+  .menu__description__entree1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__entree1 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes menu__description__entree1 {
+    100% {
+      right: 0;
+    }
+  }
+  .menu__description__plats1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__plats1 0.5s forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes menu__description__plats1 {
+    100% {
+      right: 0;
+    }
+  }
+  .menu__description__desserts1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__desserts1 0.5s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes menu__description__desserts1 {
+    100% {
+      right: 0;
+    }
   }
 }
-.menu__description__desserts1 {
-  position: relative;
-  right: 600px;
-  animation: menu__description__desserts1 0.5s forwards;
-  animation-delay: 3s;
-}
+@media (min-width: 770px) {
+  .header_fleche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    padding: 0;
+  }
+  .header_fleche a {
+    text-decoration: none;
+    color: black;
+    font-family: "Shrikhand", cursive;
+    font-size: 1em;
+    padding: 18px;
+  }
+  .header_fleche i {
+    position: absolute;
+    left: 30px;
+    font-size: 1.3em;
+  }
 
-@keyframes menu__description__desserts1 {
-  100% {
-    right: 0;
+  .carte_restaurant {
+    background-color: #FFFF;
+    object-fit: contain;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .carte_restaurant img {
+    width: 100%;
+    object-fit: cover;
+    height: 40vh;
+  }
+  .carte_restaurant_name {
+    background-color: #FFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    height: 45px;
+    top: 90%;
+    border-radius: 25px 25px 0px 0px;
+  }
+  .carte_restaurant_name h4 {
+    font-size: 1.4rem;
+    font-family: "Shrikhand", cursive;
+    padding-right: 5px;
+    padding-top: 10px;
+  }
+
+  .menu__description {
+    margin-top: 60px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+  }
+
+  .menu__description__entree h3, .menu__description__plats h3,
+.menu__description__desserts h3 {
+    font-size: 1rem;
+    border-bottom: 3px solid aqua;
+    width: 10%;
+  }
+
+  .menu__description__entree, .menu__description__plats, .menu__description__desserts {
+    padding-bottom: 3px;
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check {
+    position: relative;
+    left: 0;
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check i, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check i {
+    transition: transform 0.5s ease-out;
+    transform: rotate(360deg);
+  }
+  .menu__description__entree > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__entree > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__entree > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__plats > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__entree1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__plats1 > .menu_description_prix > .prix, .menu__description__desserts > input:checked + .menu__description__desserts1 > .menu_description_prix > .prix {
+    position: relative;
+    left: 0;
+  }
+
+  .menu__description__entree > input, .menu__description__plats > input, .menu__description__desserts > input {
+    opacity: 0;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 3px #dddada;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
+    width: 65%;
+    margin-left: 2%;
+  }
+  .menu__description__entree .menu__description__entree1 h4, .menu__description__entree .menu__description__plats1 h4, .menu__description__entree .menu__description__desserts1 h4, .menu__description__plats .menu__description__entree1 h4, .menu__description__plats .menu__description__plats1 h4, .menu__description__plats .menu__description__desserts1 h4, .menu__description__desserts .menu__description__entree1 h4, .menu__description__desserts .menu__description__plats1 h4, .menu__description__desserts .menu__description__desserts1 h4 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .menu__description__entree .menu__description__entree1 .comment, .menu__description__entree .menu__description__plats1 .comment, .menu__description__entree .menu__description__desserts1 .comment, .menu__description__plats .menu__description__entree1 .comment, .menu__description__plats .menu__description__plats1 .comment, .menu__description__plats .menu__description__desserts1 .comment, .menu__description__desserts .menu__description__entree1 .comment, .menu__description__desserts .menu__description__plats1 .comment, .menu__description__desserts .menu__description__desserts1 .comment {
+    font-size: 0.8em;
+    font-family: "Roboto", sans-serif;
+    line-height: 0;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix, .menu__description__entree .menu__description__plats1 .menu_description_prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix, .menu__description__plats .menu__description__entree1 .menu_description_prix, .menu__description__plats .menu__description__plats1 .menu_description_prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    margin-left: 3%;
+    position: relative;
+    left: 0;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .prix, .menu__description__entree .menu__description__plats1 .menu_description_prix .prix, .menu__description__entree .menu__description__desserts1 .menu_description_prix .prix, .menu__description__plats .menu__description__entree1 .menu_description_prix .prix, .menu__description__plats .menu__description__plats1 .menu_description_prix .prix, .menu__description__plats .menu__description__desserts1 .menu_description_prix .prix, .menu__description__desserts .menu__description__entree1 .menu_description_prix .prix, .menu__description__desserts .menu__description__plats1 .menu_description_prix .prix, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .prix {
+    color: #333232;
+    font-weight: bold;
+    margin-right: 2%;
+    flex-grow: 2;
+    margin-bottom: 5%;
+    left: 30%;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check {
+    background-color: #64e7e7;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    left: 80%;
+    position: relative;
+  }
+  .menu__description__entree .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__entree .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__plats .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__entree1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__plats1 .menu_description_prix .menu_description_prix_check i, .menu__description__desserts .menu__description__desserts1 .menu_description_prix .menu_description_prix_check i {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 70px;
+    justify-content: center;
+    font-size: 1.3em;
+  }
+
+  #bouton_comamnder a {
+    background: linear-gradient(#ff79dA, #9356DC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    border-radius: 30px;
+    width: 55%;
+    padding: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+  }
+  #bouton_comamnder a:hover {
+    background: #ff7cdb;
+    border-radius: 25px;
+    box-shadow: 5px 5px 3px #9356DC;
+  }
+
+  .menu__description__entree1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__entree1 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes menu__description__entree1 {
+    100% {
+      right: 0;
+    }
+  }
+  .menu__description__plats1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__plats1 0.5s forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes menu__description__plats1 {
+    100% {
+      right: 0;
+    }
+  }
+  .menu__description__desserts1 {
+    position: relative;
+    right: 600px;
+    animation: menu__description__desserts1 0.5s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes menu__description__desserts1 {
+    100% {
+      right: 0;
+    }
   }
 }
 @media all and (max-width: 500px) {
@@ -324,7 +769,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
-    width: 45%;
+    width: 55%;
     padding: 18px;
   }
   #information h1 + p + a:hover {
@@ -451,11 +896,295 @@
 }
 
 .carte_restaurants span {
-  background-color: aqua;
+  background-color: #00ffff;
   position: absolute;
   right: 30px;
   top: 25px;
-  color: green;
+  color: #008000;
+  margin-top: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: "Roboto";
+  padding: 0px 10px;
+}
+
+.btn_like_heart {
+  font-size: 1.5em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 30%;
+  z-index: 3;
+}
+.btn_like_heart > input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+.btn_like_heart > input:checked {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 400ms linear;
+}
+.btn_like_heart > input:checked + .far {
+  opacity: 0;
+}
+.btn_like_heart > input:checked + .far + .fas {
+  opacity: 1;
+  z-index: 4;
+}
+.btn_like_heart .far {
+  opacity: 1;
+  position: absolute;
+  cursor: pointer;
+  transition: 1s linear;
+}
+.btn_like_heart .fas {
+  cursor: pointer;
+  background: linear-gradient(#ff79dA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: 1s linear;
+}
+
+.footer h2 + div {
+  padding-left: 3px;
+}
+.footer h2 + div ul {
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+}
+.footer h2 + div ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  padding-top: 18px;
+  font-size: 0.8em;
+}
+.footer h2 + div ul li a i {
+  margin-right: 15px;
+  width: 10px;
+}
+
+@media (min-width: 501px) and (max-width: 769px) {
+  .bloc_page {
+    width: 98%;
+    background-color: #f2f2f2;
+    position: relative;
+  }
+
+  .loader {
+    width: 90vw;
+    height: 100vh;
+    position: absolute;
+  }
+
+  .loader__animation {
+    border-top: 10px solid #ff79da;
+    border-bottom: 10px solid #99e2d0;
+    border-left: 10px solid #9356DC;
+    border-right: 10px solid #faeb9f;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vw;
+    -webkit-animation: spin 1.5s ease 1s both;
+    -o-animation: spin 1.5s ease 1s both;
+    animation: spin 1.5s ease 1s both;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a3cf92;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+      height: 0;
+    }
+  }
+  .transition-delay-1 {
+    animation: animation-delay 0.4s 1.5s linear both;
+  }
+
+  .transition-delay-2 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 1.7s both;
+  }
+
+  .transition-delay-3 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 2s both;
+  }
+
+  @keyframes animation-delay {
+    from {
+      opacity: 0;
+    }
+    90% {
+      transform: scale(1.08);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  header {
+    width: 100%;
+  }
+  header > div {
+    background-color: #ece9e9;
+    border: 1px solid #d6d5d5;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  header #ubication {
+    display: flex;
+    justify-content: center;
+  }
+  header #ubication form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px;
+  }
+  header #ubication form input {
+    border: none;
+    font-weight: bolder;
+    font-size: 0.8em;
+  }
+
+  #information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #information h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+  }
+  #information h1 + p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+  }
+  #information h1 + p + a {
+    background: linear-gradient(#ff79dA, #9356DC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    border-radius: 30px;
+    width: 55%;
+    padding: 18px;
+  }
+  #information h1 + p + a:hover {
+    background: #ff7cdb;
+    border-radius: 25px;
+    box-shadow: 5px 5px 3px #9356DC;
+  }
+
+  #list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #list h2 {
+    margin: 15px;
+  }
+  #list h2 + ul {
+    list-style-type: none;
+    padding-left: 18px;
+  }
+  #list h2 + ul li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+  }
+  #list h2 + ul li > div {
+    background-color: #eeeeee;
+    box-shadow: 5px 5px 3px #dddada;
+    border-radius: 15px;
+    width: 85%;
+    margin-left: 5px;
+    box-sizing: content-box;
+    padding-top: 15px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 50px;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+  #list h2 + ul li i {
+    margin: 5px 15px;
+    padding: 0px 15px;
+    width: 5%;
+    color: #878788;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+  #list h2 + ul li i:hover {
+    color: #9356DC;
+  }
+  #list h2 + ul li p {
+    background-color: #9356DC;
+    border-radius: 50%;
+    width: 4%;
+    text-align: center;
+    color: #f2f2f2;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 3px;
+    position: absolute;
+  }
+}
+#restaurants {
+  padding-left: 15px;
+}
+
+.restaurants_list {
+  text-decoration: none;
+}
+
+.carte_restaurants {
+  width: 90%;
+}
+.carte_restaurants img {
+  border-radius: 12px;
+}
+
+.carte_restaurants span {
+  background-color: #00ffff;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  color: #008000;
   margin-top: 20px;
   height: 30px;
   display: flex;
@@ -519,28 +1248,288 @@
 .footer h2 {
   color: #f2f2f2;
   font-family: "Shrikhand", cursive;
-  font-size: 1em;
+  font-size: 1.3em;
   padding: 10px;
   margin-bottom: 0;
-}
-.footer h2 + div {
-  padding-left: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .footer h2 + div ul {
-  list-style-type: none;
-  padding-left: 10px;
-  margin: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.footer h2 + div ul li a {
-  color: #f2f2f2;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  padding-top: 18px;
-  font-size: 0.8em;
-}
-.footer h2 + div ul li a i {
-  margin-right: 15px;
-  width: 10px;
+
+@media (min-width: 770px) {
+  .loader {
+    width: 90vw;
+    height: 100vh;
+    position: absolute;
+  }
+
+  .loader__animation {
+    border-top: 10px solid #ff79da;
+    border-bottom: 10px solid #99e2d0;
+    border-left: 10px solid #9356DC;
+    border-right: 10px solid #faeb9f;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vw;
+    -webkit-animation: spin 1.5s ease 1s both;
+    -o-animation: spin 1.5s ease 1s both;
+    animation: spin 1.5s ease 1s both;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a3cf92;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+      height: 0;
+    }
+  }
+  .transition-delay-1 {
+    animation: animation-delay 0.4s 1.5s linear both;
+  }
+
+  .transition-delay-2 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 1.7s both;
+  }
+
+  .transition-delay-3 {
+    opacity: 0;
+    animation: animation-delay 0.4s linear 2s both;
+  }
+
+  @keyframes animation-delay {
+    from {
+      opacity: 0;
+    }
+    90% {
+      transform: scale(1.08);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  header {
+    width: 100%;
+  }
+  header > div {
+    background-color: #ece9e9;
+    border: 1px solid #d6d5d5;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  header #ubication {
+    display: flex;
+    justify-content: center;
+  }
+  header #ubication form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px;
+  }
+  header #ubication form input {
+    border: none;
+    font-weight: bolder;
+    font-size: 0.8em;
+  }
+
+  #information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #information h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+  }
+  #information h1 + p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+  }
+  #information h1 + p + a {
+    background: linear-gradient(#ff79dA, #9356DC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    border-radius: 30px;
+    width: 55%;
+    padding: 18px;
+  }
+  #information h1 + p + a:hover {
+    background: #ff7cdb;
+    border-radius: 25px;
+    box-shadow: 5px 5px 3px #9356DC;
+  }
+
+  #list {
+    cursor: pointer;
+    margin-left: 55px;
+  }
+  #list h2 {
+    margin: 45px 0 0 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #list h2 + ul li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+  }
+  #list h2 + ul li > div {
+    background-color: #eeeeee;
+    box-shadow: 5px 5px 3px #dddada;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: 5px;
+    box-sizing: content-box;
+    padding-top: 15px;
+    padding-left: 10px;
+    margin-left: 75px;
+    height: 50px;
+    transition: color 0.5s;
+  }
+  #list h2 + ul li i {
+    margin: 5px 60px;
+    padding: 0px 15px;
+    width: 5%;
+    color: #878788;
+    transition: color 0.5s;
+  }
+  #list h2 + ul li i:hover {
+    color: #9356DC;
+  }
+  #list h2 + ul li p {
+    background-color: #9356DC;
+    border-radius: 50%;
+    width: 2%;
+    text-align: center;
+    color: #f2f2f2;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 3px;
+    position: absolute;
+  }
+
+  #restaurants h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+  }
+
+  .carte_restaurants {
+    width: 70%;
+    margin-bottom: 20px;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+  }
+  .carte_restaurants img {
+    width: 70%;
+    height: 25vh;
+    border-radius: 50px;
+  }
+  .carte_restaurants_legende {
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+
+  .carte_restaurants span {
+    right: 20%;
+    top: 12%;
+  }
+
+  .btn_like_heart {
+    font-size: 1.5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 30%;
+    z-index: 3;
+  }
+  .btn_like_heart > input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: 1;
+  }
+  .btn_like_heart > input:checked {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 400ms linear;
+  }
+  .btn_like_heart > input:checked + .far {
+    opacity: 0;
+  }
+  .btn_like_heart > input:checked + .far + .fas {
+    opacity: 1;
+    z-index: 4;
+  }
+  .btn_like_heart .far {
+    opacity: 1;
+    position: absolute;
+    cursor: pointer;
+    transition: 1s linear;
+  }
+  .btn_like_heart .fas {
+    cursor: pointer;
+    background: linear-gradient(#ff79dA, #9356DC);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: 1s linear;
+  }
+
+  footer > .title__footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  footer > .title__footer + div {
+    margin-top: 15px;
+  }
+  footer > .title__footer + div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 93%;
+    margin: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

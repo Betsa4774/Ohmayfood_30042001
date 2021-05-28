@@ -4,7 +4,7 @@
         position: relative; 
         display: flex;
         justify-content: center;          
-         left: 30%; 
+        left: 30%; 
         // bottom: 5px;          
         // right: -150px;//main
         z-index: 3;      
@@ -50,8 +50,7 @@
          opacity: 0;
          transition: 1s linear;
         }
-}
-
+    }
 @mixin btn_a { //bouton explorez nos restaurants
     background: linear-gradient(#ff79dA, #9356DC);
     display: flex;  
@@ -60,60 +59,59 @@
     text-decoration: none;                       
     color: $color-text;
     border-radius: 30px;
-    width: 45%;                  
+    width: 55%;                  
     padding: nth($padding-dimensions,3);                                     
     
     &:hover { //au survol                    
         background: lighten($color-secondary,0.5);                     
         border-radius: 25px; 
-        box-shadow: 5px 5px 3px #9356DC;   
-                       
+        box-shadow: 5px 5px 3px #9356DC;                          
     }       
 }
 //scss.menu pour menu1.html
- @mixin title { //Entrees, plats et desserts
+@mixin title { //Entrees, plats et desserts
     font-size:  1rem;
     border-bottom: 3px solid aqua;
-    width: 10%;         
+    width: 10%;   
 }
-
 @mixin menu_carte {
     background-color: #f2f2f2;
+    box-shadow: 5px 5px 3px #dddada;  
     width: 93%;
     display: flex;
     flex-direction: row;
+    //flex-flow: row wrap;//animation réduction name
     justify-content: space-between;
     border-radius: 20px;
     cursor: pointer;
     margin-bottom: 15px;   
-    overflow: hidden;
+    overflow: hidden; //cache totalment les prix-check/animation fade-in fade-out du prix check
     // flex-wrap: nowrap;
-    // text-overflow: ellipsis;
+    // text-overflow: ellipsis; 
     &--name {   //inclus le nom et le commentaire  
-        background-color: rgb(187, 118, 118);       
-        width: 75%;
-        //  overflow: hidden;//??
-        //  text-overflow: ellipsis;
-        //  white-space: nowrap;
-        margin-left: 2%;//verifier si % ou px
-
+        // background-color: rgb(187, 118, 118);       
+        width: 65%;
+    //      overflow: hidden;//??
+    //   text-overflow: ellipsis;
+    //       white-space: nowrap;
+        margin-left: 2%;//verifier si % ou px      
     }
     h4 {
         // font-size: nth($taille-lettre,4);
         font-size: 1.2em;      
         margin-bottom: 0;
         margin-top: 5px;
-        //   white-space: nowrap; //??
-        //   overflow: hidden;
-        //   text-overflow: ellipsis;
+        //    white-space: nowrap; //??
+        //    overflow: hidden;
+        //    text-overflow: ellipsis;
     }
-    p {
+    .comment {
         font-size: 0.8em;
         font-family: $font-text;
         line-height: 0;      
-        // white-space: nowrap; //??
-        // // overflow: hidden;//disparait le prix et le commentaire
-        //  text-overflow: ellipsis; //??
+          white-space: nowrap; //evite que le commentaire se plie sur lui même
+         overflow: visible;//disparait le commentaire
+          text-overflow: ellipsis; //??
     }
 }
 
@@ -122,26 +120,29 @@
     flex-direction: row;
     align-items: flex-end;        
     color: white;
-    font-size: 1.2em;
-    position: relative;
+    font-size: 1em;        
+    position: relative;   
+    // background-color: #ff79dA;
     margin-left: 3%;        
-    p{
-    color: black;
-    font-weight: bold;
-    margin-right: 2%;             
+    .prix{
+        color: rgb(51, 50, 50);
+        font-weight: bold;
+        margin-right: 2%;  
+        flex-grow: 2;        
+        margin-bottom: 5%;        
+        left: 30%;    
+        position: relative; //animation fade in out prix        
     }
     .menu_description_prix_check {
         background-color: rgb(100, 231, 231);
         width: 100%;
         height: 100%;       
-        // margin-left: 1%;
         border-radius: 0px 20px 20px 0px;
         display: flex;   
-        transition-duration: 0.5s; //animation-fade in
-        transition-timing-function:linear;//animation fade-in                 
-        left: 80%;       //animation fade-in    
-        position: relative;
-             
+        transition-duration: 0.5s; //animation fade-in fade-out du prix check
+        transition-timing-function:linear;//animation fade-in fade-out du prix check                
+        left: 80%;       //animation fade-in fade-out du prix check
+        position: relative;             
         i{
             display: flex;
             align-items: center;
