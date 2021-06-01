@@ -668,7 +668,7 @@
 @media all and (max-width: 500px) {
   .bloc_page {
     width: 98%;
-    background-color: #f2f2f2;
+    background-color: #b37a7a;
     position: relative;
   }
 
@@ -1592,15 +1592,16 @@
     transition: 1s linear;
   }
 
-  footer > .title__footer {
+  footer > h2 {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    background-color: #99e2d0;
   }
-  footer > .title__footer + div {
+  footer > h2 + div {
     margin-top: 15px;
   }
-  footer > .title__footer + div ul {
+  footer > h2 + div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

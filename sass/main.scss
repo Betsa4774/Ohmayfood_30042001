@@ -7,7 +7,7 @@
 @media all and (max-width: 500px) {
     .bloc_page {
         width: 98%;
-        background-color: #f2f2f2;
+        background-color: #b37a7a;
         position: relative;        
     }   
     // mise en forme du loader
@@ -263,8 +263,7 @@
    //Last section
   .footer {    
          background-color:#212020;
-         height: 130px;        
-      
+         height: 130px;           
       h2 { //titre
             color:$color-text;
             font-family: $font-titres;
@@ -296,7 +295,7 @@
                         
                     }
                 }
-           }           
+            }           
         }    
     }  
 } 
@@ -344,17 +343,16 @@
     }   
     .transition-delay-1 {
         animation: animation-delay 0.4s 1.5s linear both;
-      }
-      .transition-delay-2 {
+    }
+    .transition-delay-2 {
         opacity: 0;
         animation: animation-delay 0.4s linear 1.7s both;
-      }
-      .transition-delay-3 {
+   }
+   .transition-delay-3 {
         opacity: 0;
         animation: animation-delay 0.4s linear 2s both;
-      }
-      
-      @keyframes animation-delay {
+    }      
+    @keyframes animation-delay {
         from {
           opacity: 0;
         }
@@ -365,7 +363,7 @@
           opacity: 1;
           transform: scale(1);
         }
-      }  
+    }  
    // Header de la page     
     header { 
         width: 100%;                
@@ -544,9 +542,8 @@
                    margin-top: 20px;                   
                    position: absolute;
                     top: 25px;
-                }               
-                            
-           } 
+                }       
+            } 
        }
     }
    //Carte Nouveau
@@ -570,16 +567,22 @@
    //Last section
   .footer {    
         background-color:#212020;
-        height: 130px;        
+        height: 130px;   
+        // >.title__footer { //titre
+        //     display: flex;
+        //     justify-content: center;
+        //     font-size: 1.5rem;
+        //     background-color: #05251d;
+     
       h2 { //titre
-             color:$color-text;
-             font-family: $font-titres;
-             font-size: nth($taille-lettre,4);
-             padding: nth($padding-dimensions,2);
-             margin-bottom: 0;
-            //  display: flex;
-            //  flex-direction: row;
-            //  justify-content: center;                  
+            color:$color-text;
+            font-family: $font-titres;
+            font-size: nth($taille-lettre,4);
+            padding: nth($padding-dimensions,2);
+            margin-bottom: 0;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: center;                  
            +div { //.info__footer
                 // padding-left: nth($padding-dimensions,1);
                 ul {
@@ -882,12 +885,11 @@
         footer {        
         //         background-color:#212020;
         //         height: 130px;        
-        >.title__footer { //titre
+        > h2 { //titre
             display: flex;
             justify-content: center;
             font-size: 1.5rem;
-
-                
+            background-color: #99e2d0;                
         //             color:$color-text;
         //             font-family: $font-titres;            //ne marche pas ?
         //             padding: nth($padding-dimensions,2);
