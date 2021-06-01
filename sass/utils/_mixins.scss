@@ -60,8 +60,7 @@
     color: $color-text;
     border-radius: 30px;
     width: 55%;                  
-    padding: nth($padding-dimensions,3);                                     
-    
+    padding: nth($padding-dimensions,3);                         
     &:hover { //au survol                    
         background: lighten($color-secondary,0.5);                     
         border-radius: 25px; 
@@ -80,38 +79,35 @@
     width: 93%;
     display: flex;
     flex-direction: row;
-    //flex-flow: row wrap;//animation réduction name
     justify-content: space-between;
     border-radius: 20px;
     cursor: pointer;
     margin-bottom: 15px;   
     overflow: hidden; //cache totalment les prix-check/animation fade-in fade-out du prix check
-    // flex-wrap: nowrap;
-    // text-overflow: ellipsis; 
+    flex-wrap: nowrap;
+    text-overflow: ellipsis; 
     &--name {   //inclus le nom et le commentaire  
-        // background-color: rgb(187, 118, 118);       
         width: 65%;
-    //      overflow: hidden;//??
-    //   text-overflow: ellipsis;
-    //       white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         margin-left: 2%;//verifier si % ou px      
     }
     h4 {
-        // font-size: nth($taille-lettre,4);
         font-size: 1.2em;      
         margin-bottom: 0;
         margin-top: 5px;
-        //    white-space: nowrap; //??
-        //    overflow: hidden;
-        //    text-overflow: ellipsis;
+        white-space: nowrap; //??
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .comment {
         font-size: 0.8em;
         font-family: $font-text;
         line-height: 0;      
-          white-space: nowrap; //evite que le commentaire se plie sur lui même
-         overflow: visible;//disparait le commentaire
-          text-overflow: ellipsis; //??
+        //white-space: nowrap; //evite que le commentaire se plie sur lui même
+        //overflow: hidden;//disparait le commentaire
+        text-overflow: ellipsis; 
     }
 }
 
@@ -122,7 +118,6 @@
     color: white;
     font-size: 1em;        
     position: relative;   
-    // background-color: #ff79dA;
     margin-left: 3%;        
     .prix{
         color: rgb(51, 50, 50);
