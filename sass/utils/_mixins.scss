@@ -74,7 +74,7 @@
     width: 10%;   
 }
 @mixin menu_carte {
-    background-color: #f2f2f2;
+    background-color: #f8f6f6;
     box-shadow: 5px 5px 3px #dddada;  
     width: 93%;
     display: flex;
@@ -84,8 +84,8 @@
     cursor: pointer;
     margin-bottom: 15px;   
     overflow: hidden; //cache totalment les prix-check/animation fade-in fade-out du prix check
-    flex-wrap: nowrap;
-    text-overflow: ellipsis; 
+//     flex-wrap: nowrap;
+//  text-overflow: ellipsis; 
     &--name {   //inclus le nom et le commentaire  
         width: 65%;
         overflow: hidden;
@@ -97,8 +97,8 @@
         font-size: 1.2em;      
         margin-bottom: 0;
         margin-top: 5px;
-        white-space: nowrap; //??
         overflow: hidden;
+        white-space: nowrap; 
         text-overflow: ellipsis;
     }
     .comment {

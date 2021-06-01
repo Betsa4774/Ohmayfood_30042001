@@ -86,7 +86,7 @@
     position: relative;
   }
   .menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
-    background-color: #f2f2f2;
+    background-color: #f8f6f6;
     box-shadow: 5px 5px 3px #dddada;
     width: 93%;
     display: flex;
@@ -96,8 +96,6 @@
     cursor: pointer;
     margin-bottom: 15px;
     overflow: hidden;
-    flex-wrap: nowrap;
-    text-overflow: ellipsis;
   }
   .menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
     width: 65%;
@@ -110,8 +108,8 @@
     font-size: 1.2em;
     margin-bottom: 0;
     margin-top: 5px;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
   .menu__description__entree .menu__description__entree1 .comment, .menu__description__entree .menu__description__plats1 .comment, .menu__description__entree .menu__description__desserts1 .comment, .menu__description__plats .menu__description__entree1 .comment, .menu__description__plats .menu__description__plats1 .comment, .menu__description__plats .menu__description__desserts1 .comment, .menu__description__desserts .menu__description__entree1 .comment, .menu__description__desserts .menu__description__plats1 .comment, .menu__description__desserts .menu__description__desserts1 .comment {
@@ -307,7 +305,7 @@
     position: relative;
   }
   .menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
-    background-color: #f2f2f2;
+    background-color: #f8f6f6;
     box-shadow: 5px 5px 3px #dddada;
     width: 93%;
     display: flex;
@@ -317,8 +315,6 @@
     cursor: pointer;
     margin-bottom: 15px;
     overflow: hidden;
-    flex-wrap: nowrap;
-    text-overflow: ellipsis;
   }
   .menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
     width: 65%;
@@ -331,8 +327,8 @@
     font-size: 1.2em;
     margin-bottom: 0;
     margin-top: 5px;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
   .menu__description__entree .menu__description__entree1 .comment, .menu__description__entree .menu__description__plats1 .comment, .menu__description__entree .menu__description__desserts1 .comment, .menu__description__plats .menu__description__entree1 .comment, .menu__description__plats .menu__description__plats1 .comment, .menu__description__plats .menu__description__desserts1 .comment, .menu__description__desserts .menu__description__entree1 .comment, .menu__description__desserts .menu__description__plats1 .comment, .menu__description__desserts .menu__description__desserts1 .comment {
@@ -465,15 +461,17 @@
   .carte_restaurant {
     background-color: #FFFF;
     object-fit: contain;
-    width: 100%;
+    width: 80%;
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: 5% 10% 5% 10%;
   }
   .carte_restaurant img {
     width: 100%;
     object-fit: cover;
-    height: 40vh;
+    height: 60vh;
+    border-radius: 50%;
   }
   .carte_restaurant_name {
     background-color: #FFFF;
@@ -502,6 +500,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #f1f1f1;
   }
 
   .menu__description__entree h3, .menu__description__plats h3,
@@ -510,7 +509,7 @@
     border-bottom: 3px solid aqua;
     width: 10%;
     margin-left: 45px;
-    width: 3%;
+    width: 7%;
   }
 
   .menu__description__entree, .menu__description__plats, .menu__description__desserts {
@@ -534,7 +533,7 @@
     position: relative;
   }
   .menu__description__entree .menu__description__entree1, .menu__description__entree .menu__description__plats1, .menu__description__entree .menu__description__desserts1, .menu__description__plats .menu__description__entree1, .menu__description__plats .menu__description__plats1, .menu__description__plats .menu__description__desserts1, .menu__description__desserts .menu__description__entree1, .menu__description__desserts .menu__description__plats1, .menu__description__desserts .menu__description__desserts1 {
-    background-color: #f2f2f2;
+    background-color: #f8f6f6;
     box-shadow: 5px 5px 3px #dddada;
     width: 93%;
     display: flex;
@@ -544,8 +543,6 @@
     cursor: pointer;
     margin-bottom: 15px;
     overflow: hidden;
-    flex-wrap: nowrap;
-    text-overflow: ellipsis;
     width: 95%;
   }
   .menu__description__entree .menu__description__entree1--name, .menu__description__entree .menu__description__plats1--name, .menu__description__entree .menu__description__desserts1--name, .menu__description__plats .menu__description__entree1--name, .menu__description__plats .menu__description__plats1--name, .menu__description__plats .menu__description__desserts1--name, .menu__description__desserts .menu__description__entree1--name, .menu__description__desserts .menu__description__plats1--name, .menu__description__desserts .menu__description__desserts1--name {
@@ -559,8 +556,8 @@
     font-size: 1.2em;
     margin-bottom: 0;
     margin-top: 5px;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
   .menu__description__entree .menu__description__entree1 .comment, .menu__description__entree .menu__description__plats1 .comment, .menu__description__entree .menu__description__desserts1 .comment, .menu__description__plats .menu__description__entree1 .comment, .menu__description__plats .menu__description__plats1 .comment, .menu__description__plats .menu__description__desserts1 .comment, .menu__description__desserts .menu__description__entree1 .comment, .menu__description__desserts .menu__description__plats1 .comment, .menu__description__desserts .menu__description__desserts1 .comment {
@@ -612,6 +609,7 @@
   #bouton_comamnder {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
   }
   #bouton_comamnder a {
     background: linear-gradient(#ff79dA, #9356DC);
@@ -1204,23 +1202,64 @@
 #restaurants {
   padding-left: 15px;
 }
-#restaurants h2 {
-  display: flex;
-  justify-content: center;
-}
 
 .restaurants_list {
   text-decoration: none;
 }
 
 .carte_restaurants {
-  width: 60%;
-  height: 30%;
+  background-color: #FFFF;
+  object-fit: contain;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.carte_restaurants > a {
+  text-decoration: none;
+  color: transparent;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .carte_restaurants img {
   width: 100%;
-  height: 15vh;
+  object-fit: cover;
+  height: 35vh;
   border-radius: 15px;
+  overflow: hidden;
+}
+.carte_restaurants_legende {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  padding-bottom: 5%;
+}
+.carte_restaurants_legende_title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 57%;
+}
+.carte_restaurants_legende_title h4 {
+  font-size: 1.3em;
+  margin-top: 7px;
+}
+.carte_restaurants_legende_title p {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+  position: absolute;
+  top: 25px;
 }
 
 .carte_restaurants span {

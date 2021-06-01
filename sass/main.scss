@@ -486,68 +486,68 @@
  //Les 4 restaurants
   #restaurants {
      padding-left: 15px;
-     h2{        
-         display: flex;
-         justify-content: center;    
-     }
+    //  h2{        
+    //      display: flex;
+    //      justify-content: center;    
+    //  }
    }
    .restaurants_list {
        text-decoration: none;
     }
     .carte_restaurants {
-        // background-color: $color-card;
-        // object-fit: contain;
-         width: 60%;                
-        // margin-left: auto;
-        // margin-right: auto;
-        // margin-bottom: auto;
-         height: 30%;     
-        // position: relative; 
-        // display: flex;
-        // flex-direction: column;  
-        // > a {
-        //     text-decoration: none;
-        //     color: transparent;
-        //     z-index: 1;
-        //     position: absolute;
-        //     top: 0;
-        //     bottom: 0;
-        //     left: 0;
-        //     right: 0;
-        //}
+        background-color: $color-card;
+        object-fit: contain;
+        width: 100%;                
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        height: 70%;     
+       position: relative; 
+        display: flex;
+        flex-direction: column;  
+        > a {
+            text-decoration: none;
+            color: transparent;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
         & img {
          width: 100%;
-            // object-fit: cover;
-            height: 15vh;         
+            object-fit: cover;
+            height: 35vh;         
             border-radius: 15px;
-            //overflow: hidden;
+            overflow: hidden;
        }
-        // &_legende {
-        //     width: 100%;
-        //     display: flex;
-        //     flex-direction: row;         
-        //     align-items: center;
-        //     position: relative;
-        //     padding-bottom: 5%;
-            // &_title {
-            //    position: relative;   
-            //    display: flex;
-            //    flex-direction: column;
-            //    width: 57%;
-            //    & h4 { 
-            //       font-size: nth($taille-lettre,4);
-            //       margin-top: 7px; 
-               // }
-                // & p {//text
-                //    font-size: nth($taille-lettre,3);
-                //    font-family: $font-text;                   
-                //    margin-top: 20px;                   
-                //    position: absolute;
-                //     top: 25px;
-                // }               
+        &_legende {
+            width: 100%;
+            display: flex;
+            flex-direction: row;         
+            align-items: center;
+            position: relative;
+            padding-bottom: 5%;
+            &_title {
+               position: relative;   
+               display: flex;
+               flex-direction: column;
+               width: 57%;
+               & h4 { 
+                  font-size: nth($taille-lettre,4);
+                  margin-top: 7px; 
+               }
+                & p {//text
+                   font-size: nth($taille-lettre,3);
+                   font-family: $font-text;                   
+                   margin-top: 20px;                   
+                   position: absolute;
+                    top: 25px;
+                }               
                             
-          //  } 
-      //  }
+           } 
+       }
     }
    //Carte Nouveau
     .carte_restaurants span {
@@ -814,7 +814,7 @@
             // position: relative; 
             display: flex;
             flex-direction: row;  
-            > a {
+           //> a {
                 // text-decoration: none;
                 // color: transparent;
                 // z-index: 1;
@@ -823,7 +823,7 @@
                 // bottom: 0;
                 // left: 0;
                 // right: 0;
-            }
+           // }
             & img {
                 width: 70%;
                 // object-fit: cover;
