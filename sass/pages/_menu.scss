@@ -1,3 +1,4 @@
+
 //mobile
 @media all and (max-width: 500px)  {
    .header_fleche {
@@ -47,7 +48,7 @@
             & h4 { //nom du resto
                 font-size: 1.4rem;
                 font-family: $font-titres;
-                padding-right: 5px;
+                padding-left: 5px;
                 padding-top: 10px;   
             }    
         }      
@@ -99,9 +100,10 @@
             }            
         }   
     }     
+    
     //bouton commander
-    #bouton_comamnder {   
-       a { 
+    #bouton_comamnder {        
+        a { 
            @include btn_a;
            text-decoration: none;
            display: flex;
@@ -112,10 +114,10 @@
    
    //animations-glissage des cartes
    .menu__description__entree1 {//les 3 cartes
-         position: relative;
-         right: 600px;    
-         animation: menu__description__entree1 0.5s forwards;
-         animation-delay: 1s;
+        position: relative;
+        right: 600px;    
+        animation: menu__description__entree1 0.5s forwards;
+        animation-delay: 1s;
     } 
     @keyframes menu__description__entree1 {
         100% { right: 0; }
@@ -246,7 +248,8 @@
         }    
     }           
     //bouton commander
-    #bouton_comamnder {   
+    #bouton_comamnder {  
+        margin-left: 20%; 
         a { 
             @include btn_a;
             text-decoration: none;
@@ -316,6 +319,7 @@
         background-color: $color-card;   
         object-fit: contain;
         width: 80%;   
+        height: 60vh;
         position: relative; 
         display: flex;
         flex-direction: column;   
@@ -323,7 +327,7 @@
         & img {
             width: 100%;
             object-fit: cover;
-            height: 60vh; 
+            height: 55vh; 
             border-radius: 50%;               
         }
         &_name {  //carte de la photo
@@ -370,7 +374,7 @@
     .menu__description__entree, .menu__description__plats, .menu__description__desserts {
         // background-color: pink;
         padding-bottom: 3px;
-        > input:checked {
+        > input:checked, input:hover {
             & + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check,
             & + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check,
             & + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check 
@@ -384,26 +388,12 @@
             }
             & + .menu__description__entree1 > .menu_description_prix > .prix,
             & + .menu__description__plats1 > .menu_description_prix > .prix,
-            & + .menu__description__desserts1 > .menu_description_prix > .prix { //animation fade in out du prix
+            & + .menu__description__desserts1 > .menu_description_prix > .prix {//animation fade in out du prix
             position: relative;
             left: 0;            
-            }
-            
+            }            
         }
     }
-    //essai
-   
-    // .menu__description__entree1, .menu__description__plats1, .menu__description__desserts1 :hover {//les 9 cartes
-    //     @include menu_carte;   
-    //     // background-color: green;    
-    //  .menu_description_prix :hover{ 
-    //         @include prix;    
-    //         position: relative; 
-    //         background-color: green;
-    //         left: 0;               
-    //     }
-  //  }    
-
     .menu__description__entree, .menu__description__plats, .menu__description__desserts {//Englobe les 9 cartes
         >input {
         opacity: 0 ;
@@ -411,7 +401,7 @@
     }    
     .menu__description__entree1, .menu__description__plats1, .menu__description__desserts1 {//les 9 cartes
         @include menu_carte; 
-            width: 95%;
+           
            .menu_description_prix { 
                @include prix;    
                 position: relative; 
@@ -424,11 +414,7 @@
         display: flex;
         justify-content: center; 
         margin-top: 10px;        a { 
-            @include btn_a;
-            // text-decoration: none;
-            // display: flex;
-            // justify-content: center;
-            // margin: 60px;
+            @include btn_a;            
         }
     }//animations-glissage
     .menu__description__entree1 {//les 3 cartes
@@ -461,8 +447,7 @@
         100% { right: 0; }
     }
 
- 
-
-
-
+}
+.hidden-text {
+    @include hidden-text;
 }

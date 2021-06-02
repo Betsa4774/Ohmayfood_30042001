@@ -84,31 +84,35 @@
     cursor: pointer;
     margin-bottom: 15px;   
     overflow: hidden; //cache totalment les prix-check/animation fade-in fade-out du prix check
-//     flex-wrap: nowrap;
-//  text-overflow: ellipsis; 
+
+
     &--name {   //inclus le nom et le commentaire  
-        width: 65%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin-left: 2%;//verifier si % ou px      
-    }
-    h4 {
+        width: 65%;        
+        margin-left: 2%;             
+    > h4 {
         font-size: 1.2em;      
         margin-bottom: 0;
-        margin-top: 5px;
-        overflow: hidden;
-        white-space: nowrap; 
-        text-overflow: ellipsis;
+        margin-top: 5px;    
     }
-    .comment {
+    > .comment {
         font-size: 0.8em;
         font-family: $font-text;
-        line-height: 0;      
-        //white-space: nowrap; //evite que le commentaire se plie sur lui même
-        //overflow: hidden;//disparait le commentaire
-        text-overflow: ellipsis; 
     }
+    }
+}
+
+@mixin hidden-text {
+    overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        > h4, p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        > p{
+            margin-top: 2%;
+        }
 }
 
 @mixin prix {       
