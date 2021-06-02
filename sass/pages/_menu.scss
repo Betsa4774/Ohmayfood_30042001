@@ -67,7 +67,7 @@
     //Cartes contenant les noms, les commentaires, les prix et les check des repas
     .menu__description__entree, .menu__description__plats, .menu__description__desserts {
         padding-bottom: 3px;
-        > input:checked {
+        > input:checked, input:hover {
             & + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check,
             & + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check,
             & + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check {
@@ -213,7 +213,7 @@
     //Cartes contenant les noms, les commentaires, les prix et les check des repas
     .menu__description__entree, .menu__description__plats, .menu__description__desserts {
         padding-bottom: 3px;
-        > input:checked {
+        > input:checked, input:hover {
             & + .menu__description__entree1 > .menu_description_prix > .menu_description_prix_check,
             & + .menu__description__plats1 > .menu_description_prix > .menu_description_prix_check,
             & + .menu__description__desserts1 > .menu_description_prix > .menu_description_prix_check 
