@@ -524,7 +524,7 @@
     width: 100%;
     object-fit: cover;
     height: 55vh;
-    border-radius: 50%;
+    border-radius: 20%;
   }
   .carte_restaurant_name {
     background-color: #FFFF;
