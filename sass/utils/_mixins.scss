@@ -59,6 +59,8 @@
     text-decoration: none;                       
     color: $color-text;
     border-radius: 30px;
+    margin-bottom: 30px;
+
     width: 55%;                  
     padding: nth($padding-dimensions,3);                         
     &:hover { //au survol                    

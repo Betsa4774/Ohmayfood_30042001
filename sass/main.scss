@@ -6,10 +6,11 @@
 //Mobile
 @media (max-width: 500px) {
     .bloc_page {
-        width: 98%;       
+        width: 100%;       
         position: relative;   
         margin-right: 0;
-        margin-left: 0;      
+        margin-left: 0;  
+            
     }   
     // mise en forme du loader
      .loader {         
@@ -75,7 +76,8 @@
       
         >div { //Carte et logo 
             background-color: #ffffff;
-            // border: 1px solid #d6d5d5;
+            box-shadow: 0px 3px 2px #dddada;
+
             // padding-top: 25px;           
             display: flex;
             justify-content: center; 
@@ -84,7 +86,9 @@
      #ubication {   
          display: flex;
          justify-content: center;
-         background-color: #ece9e9;             
+         background-color: #ece9e9; 
+         margin-top: 3px;
+        
          form {
                 display: flex;
                 flex-direction: row;  
@@ -108,13 +112,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: rgb(248, 248, 248);
+        margin-bottom: 30px;
       h1 { //Reservez le menu...
             display: flex;
             justify-content: center;
             text-align: center;
             font-size: nth($taille-lettre,4);
             font-family: $font-text;  
-            margin-bottom: 0;        
+            margin-bottom: 1px;        
          +p { //Découvrez des restaurants...               
                 display: flex;  
                 justify-content: center;  
@@ -144,15 +150,15 @@
                     flex-direction: row;  
                     margin-bottom: nth($margin-dimensions,3);        
                     >div { //carte de la liste du fonctionnement
-                        background-color: #eeeeee;
+                        background-color: #f6f4f4d5;
                         box-shadow: 5px 5px 3px #dddada;  
                         border-radius: 15px;
-                        width: 90%;                       
+                        width: 80%;                       
                         margin-left: 5px;
                         box-sizing: content-box;                       
                         padding-top: 15px;
                         padding-left: 10px;
-                        margin-left: 10px; 
+                        margin-left: 20px; 
                         height: 50px;
                         -webkit-transition: color 0.5s;
                         transition: color 0.5s;                   
@@ -190,6 +196,11 @@
     //Les 4 restaurants
   #restaurants {
      padding-left: 15px;
+     background-color: rgb(229, 226, 226);
+     padding-bottom: 35px;
+     padding-right: 15px;
+
+
    }
    .restaurants_list {
        text-decoration: none;
@@ -197,11 +208,13 @@
     .carte_restaurants {
         background-color: $color-card;
         object-fit: contain;
-        width: 98%;        
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: auto;
-        height: 70%;     
+        width: 100%;        
+        box-shadow: 5px 5px 3px #dfdddd; 
+        border-radius: 12px;
+        // margin-left: auto;
+        // margin-right: auto;
+        margin-bottom: 15px;
+        height: 60%;     
         position: relative; 
         display: flex;
         flex-direction: column;  
@@ -238,13 +251,16 @@
                & h4 { 
                   font-size: nth($taille-lettre,4);
                   margin-top: 7px; 
+                  margin-left: 10px;
                 }
                 & p {//text
                    font-size: nth($taille-lettre,3);
                    font-family: $font-text;                   
-                   margin-top: 20px;                   
+                   margin-top: 1
+                   0px;                   
                    position: absolute;
-                    top: 25px;
+                   top: 25px;
+                   margin-left: 10px;
                 }               
                             
             } 
@@ -277,7 +293,8 @@
             font-family: $font-titres;
             font-size: nth($taille-lettre,3);
             padding: nth($padding-dimensions,2);
-            margin-bottom: 0;                  
+            margin-bottom: 0; 
+            margin-top: 0%;                
             display: flex;
             flex-direction: column;
            +div { //.info__footer
@@ -465,7 +482,7 @@
                        width: 4%;
                        text-align: center;
                        color: $color-text;                   
-                        padding: nth($padding-dimensions,1);   
+                       padding: nth($padding-dimensions,1);   
                        position: absolute;                                          
                     }
                 }
@@ -487,6 +504,7 @@
        text-decoration: none;
     }
     .carte_restaurants {
+
         background-color: $color-card;
         object-fit: contain;
         width: 95%;                
@@ -639,7 +657,8 @@
         }
     }
     //Les 4 restaurants
-    #restaurants {        
+    #restaurants {   
+         
         h2 {
             display: flex;
             justify-content: center;
@@ -649,9 +668,12 @@
     .carte_restaurants {            
         width: 70%;            
         margin-bottom: 20px;
-        height: 30%;                
+        margin-left: 35px;
+        padding-left: 35px;
+        height: 40%;                
         display: flex;
-        flex-direction: row;            
+        flex-direction: row; 
+        align-items: center;          
         & img {
            width: 70%;               
            height: 25vh;         

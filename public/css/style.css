@@ -223,6 +223,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
+    margin-bottom: 30px;
     width: 55%;
     padding: 18px;
     text-decoration: none;
@@ -437,6 +438,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
+    margin-bottom: 30px;
     width: 55%;
     padding: 18px;
     text-decoration: none;
@@ -663,6 +665,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
+    margin-bottom: 30px;
     width: 55%;
     padding: 18px;
   }
@@ -725,7 +728,7 @@
 
 @media (max-width: 500px) {
   .bloc_page {
-    width: 98%;
+    width: 100%;
     position: relative;
     margin-right: 0;
     margin-left: 0;
@@ -799,6 +802,7 @@
   }
   header > div {
     background-color: #ffffff;
+    box-shadow: 0px 3px 2px #dddada;
     display: flex;
     justify-content: center;
   }
@@ -806,6 +810,7 @@
     display: flex;
     justify-content: center;
     background-color: #ece9e9;
+    margin-top: 3px;
   }
   header #ubication form {
     display: flex;
@@ -826,6 +831,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f8f8f8;
+    margin-bottom: 30px;
   }
   #information h1 {
     display: flex;
@@ -833,7 +840,7 @@
     text-align: center;
     font-size: 1.3em;
     font-family: "Roboto", sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 1px;
   }
   #information h1 + p {
     display: flex;
@@ -850,6 +857,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
+    margin-bottom: 30px;
     width: 55%;
     padding: 18px;
   }
@@ -877,15 +885,15 @@
     margin-bottom: 25px;
   }
   #list h2 + ul li > div {
-    background-color: #eeeeee;
+    background-color: #f6f4f4d5;
     box-shadow: 5px 5px 3px #dddada;
     border-radius: 15px;
-    width: 90%;
+    width: 80%;
     margin-left: 5px;
     box-sizing: content-box;
     padding-top: 15px;
     padding-left: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     height: 50px;
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
@@ -915,6 +923,9 @@
 }
 #restaurants {
   padding-left: 15px;
+  background-color: #e5e2e2;
+  padding-bottom: 35px;
+  padding-right: 15px;
 }
 
 .restaurants_list {
@@ -924,11 +935,11 @@
 .carte_restaurants {
   background-color: #FFFF;
   object-fit: contain;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  height: 70%;
+  width: 100%;
+  box-shadow: 5px 5px 3px #dfdddd;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  height: 60%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -968,13 +979,15 @@
 .carte_restaurants_legende_title h4 {
   font-size: 1.3em;
   margin-top: 7px;
+  margin-left: 10px;
 }
 .carte_restaurants_legende_title p {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
-  margin-top: 20px;
+  margin-top: 1 0px;
   position: absolute;
   top: 25px;
+  margin-left: 10px;
 }
 
 .carte_restaurants span {
@@ -1049,6 +1062,7 @@
   font-size: 1em;
   padding: 10px;
   margin-bottom: 0;
+  margin-top: 0%;
   display: flex;
   flex-direction: column;
 }
@@ -1196,6 +1210,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
+    margin-bottom: 30px;
     width: 55%;
     padding: 18px;
   }
@@ -1366,6 +1381,7 @@
     text-decoration: none;
     color: #f2f2f2;
     border-radius: 30px;
+    margin-bottom: 30px;
     width: 55%;
     padding: 18px;
   }
@@ -1434,9 +1450,12 @@
   .carte_restaurants {
     width: 70%;
     margin-bottom: 20px;
-    height: 30%;
+    margin-left: 35px;
+    padding-left: 35px;
+    height: 40%;
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   .carte_restaurants img {
     width: 70%;
